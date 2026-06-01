@@ -329,6 +329,21 @@
     "subtitle": "Licensed providers — PG, JILI, CQ9, Pragmatic & more on one wallet.",
     "footerSubtitle": "Trusted platform partners"
   },
+  "Platforms": {
+    "indexTitle": "Game providers",
+    "indexMetaTitle": "Casino & slot providers",
+    "indexMetaDesc": "Browse games by provider — PG Soft, JILI, CQ9, Lucky Sport, and more from the live platform catalog.",
+    "indexIntro": "Each studio lists titles synced from the platform feed. Open a provider to see slots, sports, fishing, or live tables available in your wallet.",
+    "homeTitle": "Browse by provider",
+    "homeSubtitle": "PG, JILI, CQ9, sportsbooks & more",
+    "viewAll": "All providers",
+    "pageTitle": "{platform} games",
+    "pageDescription": "Play {platform} in {category} — titles from the live catalog for Pakistan players.",
+    "seoTitle": "{platform} | Game provider",
+    "playProvider": "Play {platform}",
+    "gameCount": "{count} games in catalog",
+    "empty": "No {platform} games listed right now. Try another provider or open the full casino."
+  },
   "Licenses": {
     "sectionTitle": "Certifications & regulatory oversight",
     "sectionIntro": "Games and systems on this platform are aligned with internationally recognized testing, licensing, and supervision frameworks. These marks reflect independent review of fairness, security, and operator accountability.",
@@ -358,6 +373,7 @@
     "playCol": "Play",
     "infoCol": "Info",
     "hotList": "Hot List",
+    "providers": "Game providers",
     "sportsbook": "Sportsbook",
     "guidesLink": "Guides & rankings",
     "currencies": "Wallet currencies",

@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { GameGrid } from "@/components/games/GameGrid";
 import { CategoryStrip } from "@/components/home/CategoryStrip";
+import { PlatformStrip } from "@/components/platforms/PlatformStrip";
 import { FeaturedScroll } from "@/components/home/FeaturedScroll";
 import { HeroSection } from "@/components/home/HeroSection";
 import { SectionHeading } from "@/components/home/SectionHeading";
@@ -11,7 +12,15 @@ import { PlayCta } from "@/components/ui/PlayCta";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PartnerLogos } from "@/components/platforms/PartnerLogos";
-import { fetchAllPlatIcons, fetchPopularGames } from "@/lib/api";
+import {
+  fetchAllPlatIcons,
+  fetchGameClasses,
+  fetchPopularGames,
+} from "@/lib/api";
+import {
+  buildPlatformCatalog,
+  buildPlatformIndex,
+} from "@/lib/platforms";
 import { getSystemConfig } from "@/lib/system-config";
 import { buildHomeMetadata } from "@/lib/home-metadata";
 import { absoluteUrl, itemListJsonLd } from "@/lib/seo";
@@ -30,15 +39,19 @@ export default async function HomePage({ params }: Props) {
   const { locale, currency } = await resolvePageParams(params);
   setRequestLocale(locale);
 
-  const [popularGames, partnerIcons, tHome, tNav, tPartners, config] =
+  const [popularGames, partnerIcons, classes, tHome, tNav, tPartners, config] =
     await Promise.all([
       fetchPopularGames(locale, 30),
       fetchAllPlatIcons(locale),
+      fetchGameClasses(locale),
       getTranslations({ locale, namespace: "Home" }),
       getTranslations({ locale, namespace: "Nav" }),
       getTranslations({ locale, namespace: "Partners" }),
       getSystemConfig(locale),
     ]);
+
+  const platformCatalog = buildPlatformCatalog(classes);
+  const platformIndex = buildPlatformIndex(classes);
 
   const listItems = popularGames.slice(0, 12).map((g) => ({
     name: formatGameTitle(g.gameName),
@@ -65,6 +78,8 @@ export default async function HomePage({ params }: Props) {
 
       <CategoryStrip />
 
+      <PlatformStrip />
+
       <GuidesSection />
 
       <PartnerLogos
@@ -73,6 +88,8 @@ export default async function HomePage({ params }: Props) {
         config={config}
         title={tPartners("title")}
         subtitle={tPartners("subtitle")}
+        platformIndex={platformIndex}
+        platformCatalog={platformCatalog}
       />
 
       <SeoContentBlock />

@@ -45,6 +45,11 @@ export function SiteFooter() {
                   {tNav("allGames")}
                 </Link>
               </li>
+              <li>
+                <Link href="/platform" className="hover:text-brand">
+                  {t("providers")}
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

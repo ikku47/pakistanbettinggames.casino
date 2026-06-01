@@ -1,7 +1,12 @@
 import type { AppLocale } from "@/i18n/routing";
 import { toApiContentLanguage } from "@/i18n/api-locale";
 import { apiConfig } from "./config";
-import { buildPlatformIndex, type PlatformIndex } from "./platforms";
+import {
+  buildPlatformCatalog,
+  buildPlatformIndex,
+  type PlatformCatalogItem,
+  type PlatformIndex,
+} from "./platforms";
 import type {
   ApiResponse,
   GameClass,
@@ -72,15 +77,21 @@ export async function fetchGameList(
     gameClassCode: string;
     pageNo?: number;
     pageSize?: number;
+    platformId?: number;
   },
 ): Promise<GameListPage> {
+  const body: Record<string, unknown> = {
+    gameClassCode: params.gameClassCode,
+    pageNo: params.pageNo ?? 1,
+    pageSize: params.pageSize ?? 48,
+  };
+  if (params.platformId != null) {
+    body.platformId = params.platformId;
+  }
+
   const data = await apiFetch<GameListPage>(locale, ENDPOINTS.gameList, {
     method: "POST",
-    body: JSON.stringify({
-      gameClassCode: params.gameClassCode,
-      pageNo: params.pageNo ?? 1,
-      pageSize: params.pageSize ?? 48,
-    }),
+    body: JSON.stringify(body),
   });
 
   return (
@@ -106,6 +117,13 @@ export async function fetchPlatformIndex(
 ): Promise<PlatformIndex> {
   const classes = await fetchGameClasses(locale);
   return buildPlatformIndex(classes);
+}
+
+export async function fetchPlatformCatalog(
+  locale: AppLocale,
+): Promise<PlatformCatalogItem[]> {
+  const classes = await fetchGameClasses(locale);
+  return buildPlatformCatalog(classes);
 }
 
 export async function fetchPopularGames(

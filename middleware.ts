@@ -16,6 +16,7 @@ const LOCALE_SET = new Set<string>(LOCALES);
 const LEGACY_SEGMENTS = new Set([
   "games",
   "category",
+  "platform",
   "faq",
   "about",
   "guides",

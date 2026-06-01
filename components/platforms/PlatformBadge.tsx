@@ -1,3 +1,4 @@
+import { CurrencyLink as Link } from "@/components/navigation/CurrencyLink";
 import { GameImage } from "@/components/games/GameImage";
 import { assetUrl } from "@/lib/config";
 import type { ResolvedPlatform } from "@/lib/platforms";
@@ -24,8 +25,8 @@ export function PlatformBadge({
   const dim = size === "sm" ? "h-5 w-5" : "h-8 w-8";
   const text = size === "sm" ? "text-xs" : "text-sm";
 
-  return (
-    <div className={`flex items-center gap-2 ${className}`}>
+  const content = (
+    <>
       {iconSrc && (
         <span
           className={`${dim} shrink-0 overflow-hidden rounded-md bg-surface-elevated p-0.5 ring-1 ring-border`}
@@ -47,6 +48,19 @@ export function PlatformBadge({
           {platform.name}
         </p>
       </div>
-    </div>
+    </>
   );
+
+  if (platform.slug) {
+    return (
+      <Link
+        href={`/platform/${platform.slug}`}
+        className={`flex items-center gap-2 rounded-lg transition hover:text-brand ${className}`}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return <div className={`flex items-center gap-2 ${className}`}>{content}</div>;
 }

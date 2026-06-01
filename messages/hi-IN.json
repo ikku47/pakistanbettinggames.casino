@@ -186,6 +186,21 @@
     "p2": "कंपनी के पास Malta Gaming Authority (MGA) द्वारा जारी अंतर्राष्ट्रीय गेमिंग लाइसेंस है और यह British Virgin Islands (BVI) में पंजीकृत है। मान्यता प्राप्त प्राधिकरणों से कई अनुपालन प्रमाणनों के साथ, pakistanbettinggames.casino वैश्विक गेमिंग और बेटिंग व्यवसाय को कानूनी रूप से संचालित करने के लिए पूर्ण रूप से योग्य है।",
     "p3": "केवल 18+। जिम्मेदारी से खेलें। जो खो सकते हैं वही दांव लगाएँ।"
   },
+  "Platforms": {
+    "indexTitle": "Game providers",
+    "indexMetaTitle": "Casino & slot providers",
+    "indexMetaDesc": "Browse games by provider — PG Soft, JILI, CQ9, Lucky Sport, and more from the live platform catalog.",
+    "indexIntro": "Each studio lists titles synced from the platform feed.",
+    "homeTitle": "Browse by provider",
+    "homeSubtitle": "PG, JILI, CQ9, sportsbooks & more",
+    "viewAll": "All providers",
+    "pageTitle": "{platform} games",
+    "pageDescription": "Play {platform} in {category} — titles from the live catalog.",
+    "seoTitle": "{platform} | Game provider",
+    "playProvider": "Play {platform}",
+    "gameCount": "{count} games in catalog",
+    "empty": "No {platform} games listed right now."
+  },
   "Partners": {
     "title": "हमारे गेम पार्टनर",
     "subtitle": "लाइसेंस प्रोवाइडर — PG, JILI, CQ9, Pragmatic और अधिक, एक वॉलेट पर।",
@@ -220,6 +235,7 @@
     "playCol": "खेलें",
     "infoCol": "जानकारी",
     "hotList": "हॉट लिस्ट",
+    "providers": "Game providers",
     "sportsbook": "स्पोर्ट्सबुक",
     "licenses": "प्रमाणन",
     "llms": "LLMs.txt",

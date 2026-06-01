@@ -9,7 +9,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { htmlLang } from "@/i18n/api-locale";
 import { routing } from "@/i18n/routing";
 import { PartnerLogos } from "@/components/platforms/PartnerLogos";
-import { fetchAllPlatIcons } from "@/lib/api";
+import { fetchAllPlatIcons, fetchGameClasses } from "@/lib/api";
+import {
+  buildPlatformCatalog,
+  buildPlatformIndex,
+} from "@/lib/platforms";
 import {
   CURRENCY_CODES,
   currencySlug,
@@ -80,13 +84,18 @@ export default async function CurrencyLayout({
 
   setRequestLocale(appLocale);
 
-  const [messages, config, partnerIcons, tMeta, tPartners] = await Promise.all([
-    getMessages(),
-    getSystemConfig(appLocale),
-    fetchAllPlatIcons(appLocale),
-    getTranslations("Meta"),
-    getTranslations("Partners"),
-  ]);
+  const [messages, config, partnerIcons, classes, tMeta, tPartners] =
+    await Promise.all([
+      getMessages(),
+      getSystemConfig(appLocale),
+      fetchAllPlatIcons(appLocale),
+      fetchGameClasses(appLocale),
+      getTranslations("Meta"),
+      getTranslations("Partners"),
+    ]);
+
+  const platformCatalog = buildPlatformCatalog(classes);
+  const platformIndex = buildPlatformIndex(classes);
 
   const dir = appLocale === "ur-PK" ? "rtl" : "ltr";
 
@@ -127,6 +136,8 @@ export default async function CurrencyLayout({
                   title={tPartners("title")}
                   subtitle={tPartners("footerSubtitle")}
                   variant="compact"
+                  platformIndex={platformIndex}
+                  platformCatalog={platformCatalog}
                 />
               </div>
               <SiteFooter />

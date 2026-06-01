@@ -1,6 +1,13 @@
+import { CurrencyLink as Link } from "@/components/navigation/CurrencyLink";
 import { GameImage } from "@/components/games/GameImage";
 import { assetUrl } from "@/lib/config";
-import { dedupePartnerIcons, partnerLabelFromPath } from "@/lib/platforms";
+import {
+  dedupePartnerIcons,
+  partnerLabelFromPath,
+  type PlatformCatalogItem,
+  type PlatformIndex,
+  platformHrefForIconPath,
+} from "@/lib/platforms";
 import type { SystemConfig } from "@/lib/types";
 
 interface PartnerLogosProps {
@@ -11,6 +18,8 @@ interface PartnerLogosProps {
   /** compact = footer row; section = homepage band */
   variant?: "section" | "compact";
   className?: string;
+  platformIndex?: PlatformIndex;
+  platformCatalog?: PlatformCatalogItem[];
 }
 
 export function PartnerLogos({
@@ -20,6 +29,8 @@ export function PartnerLogos({
   subtitle,
   variant = "section",
   className = "",
+  platformIndex,
+  platformCatalog,
 }: PartnerLogosProps) {
   const partners = dedupePartnerIcons(icons);
   if (partners.length === 0) return null;
@@ -69,21 +80,37 @@ export function PartnerLogos({
         >
           {partners.map((path) => {
             const label = partnerLabelFromPath(path);
+            const href =
+              platformIndex && platformCatalog
+                ? platformHrefForIconPath(
+                    path,
+                    platformIndex,
+                    platformCatalog,
+                  )
+                : null;
+            const inner = (
+              <GameImage
+                src={assetUrl(path, config)}
+                alt={label}
+                className="max-h-full max-w-full object-contain"
+              />
+            );
+            const liClass = isCompact
+              ? "flex h-10 w-20 shrink-0 items-center justify-center opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0"
+              : "flex h-14 w-24 shrink-0 items-center justify-center rounded-lg border border-border-light bg-surface-elevated px-2 py-2 shadow-sm transition hover:border-brand/30 hover:shadow-md";
+
             return (
-              <li
-                key={path}
-                className={
-                  isCompact
-                    ? "flex h-10 w-20 shrink-0 items-center justify-center opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0"
-                    : "flex h-14 w-24 shrink-0 items-center justify-center rounded-lg border border-border-light bg-surface-elevated px-2 py-2 shadow-sm"
-                }
-                title={label}
-              >
-                <GameImage
-                  src={assetUrl(path, config)}
-                  alt={label}
-                  className="max-h-full max-w-full object-contain"
-                />
+              <li key={path} className={liClass} title={label}>
+                {href ? (
+                  <Link
+                    href={href}
+                    className="flex h-full w-full items-center justify-center"
+                  >
+                    {inner}
+                  </Link>
+                ) : (
+                  inner
+                )}
               </li>
             );
           })}

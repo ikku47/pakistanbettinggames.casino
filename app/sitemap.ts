@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { fetchAllGamesForSitemap } from "@/lib/api";
+import { fetchAllGamesForSitemap, fetchPlatformCatalog } from "@/lib/api";
 import { categories } from "@/lib/categories";
 import { siteConfig } from "@/lib/config";
 import { CURRENCY_CODES, currencySlug } from "@/lib/currency";
@@ -10,6 +10,7 @@ import { gameSlug } from "@/lib/utils";
 const staticPaths = [
   "",
   "/games",
+  "/platform",
   "/faq",
   "/about",
   "/guides",
@@ -60,6 +61,20 @@ export default async function sitemap(props: {
         changeFrequency: "daily",
         priority: 0.85,
       });
+    }
+
+    try {
+      const platforms = await fetchPlatformCatalog(locale);
+      for (const plat of platforms) {
+        entries.push({
+          url: `${base}${curPrefix}/platform/${plat.slug}`,
+          lastModified: now,
+          changeFrequency: "daily",
+          priority: 0.8,
+        });
+      }
+    } catch {
+      /* API unavailable */
     }
   }
 

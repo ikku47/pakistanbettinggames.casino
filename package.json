@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-icons.mjs && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "icons": "node scripts/generate-icons.mjs"
+    "lint": "eslint"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",
@@ -18,8 +17,6 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "sharp": "^0.34.5",
-    "to-ico": "^1.1.5",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -30,11 +27,9 @@
     "typescript": "^5"
   },
   "ignoreScripts": [
-    "sharp",
     "unrs-resolver"
   ],
   "trustedDependencies": [
-    "sharp",
     "unrs-resolver"
   ]
 }

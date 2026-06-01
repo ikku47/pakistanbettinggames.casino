@@ -186,6 +186,21 @@
     "p2": "公司持有马耳他博彩管理局 (MGA) 颁发的国际博彩牌照，并注册于英属维尔京群岛 (BVI)。凭借多家权威机构的多项合规认证，pakistanbettinggames.casino 具备在全球范围内合法开展博彩业务的完整资质。",
     "p3": "仅限 18 岁以上。请理性博彩，切勿超出承受能力投注。"
   },
+  "Platforms": {
+    "indexTitle": "Game providers",
+    "indexMetaTitle": "Casino & slot providers",
+    "indexMetaDesc": "Browse games by provider — PG Soft, JILI, CQ9, Lucky Sport, and more from the live platform catalog.",
+    "indexIntro": "Each studio lists titles synced from the platform feed.",
+    "homeTitle": "Browse by provider",
+    "homeSubtitle": "PG, JILI, CQ9, sportsbooks & more",
+    "viewAll": "All providers",
+    "pageTitle": "{platform} games",
+    "pageDescription": "Play {platform} in {category} — titles from the live catalog.",
+    "seoTitle": "{platform} | Game provider",
+    "playProvider": "Play {platform}",
+    "gameCount": "{count} games in catalog",
+    "empty": "No {platform} games listed right now."
+  },
   "Partners": {
     "title": "游戏合作伙伴",
     "subtitle": "持牌供应商 — PG、JILI、CQ9、Pragmatic 等，同一钱包畅玩。",
@@ -220,6 +235,7 @@
     "playCol": "游戏",
     "infoCol": "信息",
     "hotList": "热门榜",
+    "providers": "Game providers",
     "sportsbook": "体育博彩",
     "licenses": "认证",
     "llms": "LLMs.txt",

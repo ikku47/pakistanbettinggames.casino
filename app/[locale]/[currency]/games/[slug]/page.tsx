@@ -9,6 +9,7 @@ import {
   findGameById,
   fetchAllPlatIcons,
   fetchGameList,
+  fetchPlatformCatalog,
   fetchPlatformIndex,
   fetchPopularGames,
 } from "@/lib/api";
@@ -91,6 +92,7 @@ export default async function GameDetailPage({ params }: Props) {
     game,
     config,
     platformIndex,
+    platformCatalog,
     partnerIcons,
     t,
     tCat,
@@ -102,6 +104,7 @@ export default async function GameDetailPage({ params }: Props) {
     findGameById(locale, id),
     getSystemConfig(locale),
     fetchPlatformIndex(locale),
+    fetchPlatformCatalog(locale),
     fetchAllPlatIcons(locale),
     getTranslations({ locale, namespace: "GameDetail" }),
     getTranslations({ locale, namespace: "Categories" }),
@@ -125,7 +128,7 @@ export default async function GameDetailPage({ params }: Props) {
   const imageSrc = assetUrl(game.iconUrl, config);
   const gamePath = `/games/${slug}`;
   const tags = modTags(game);
-  const platform = resolveGamePlatform(game, platformIndex);
+  const platform = resolveGamePlatform(game, platformIndex, platformCatalog);
 
   const breadcrumbs = [
     { label: tCommon("home"), href: "/" },
