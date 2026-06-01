@@ -105,14 +105,14 @@ export default async function PlatformsIndexPage({ params }: Props) {
             <li key={plat.platformId}>
               <Link
                 href={`/platform/${plat.slug}`}
-                className="card-surface group flex items-center gap-4 p-4 hover:-translate-y-0.5"
+                className="card-surface link-card group flex items-center gap-4 p-4"
               >
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-black p-2">
+                <span className="link-card-media flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-black p-2">
                   {iconSrc ? (
                     <GameImage
                       src={iconSrc}
                       alt={plat.platformName}
-                      className="h-full w-full object-contain"
+                      className="link-card-image h-full w-full object-contain"
                     />
                   ) : (
                     <span className="text-xs font-bold text-brand">
@@ -130,7 +130,7 @@ export default async function PlatformsIndexPage({ params }: Props) {
                 </div>
                 <ChevronRight
                   size={18}
-                  className="shrink-0 text-brand opacity-0 transition group-hover:opacity-100"
+                  className="link-card-chevron shrink-0 text-brand"
                   aria-hidden
                 />
               </Link>

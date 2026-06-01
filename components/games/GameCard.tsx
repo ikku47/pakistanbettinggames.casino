@@ -24,32 +24,28 @@ export function GameCard({
   categoryLabel,
 }: GameCardProps) {
   const t = useTranslations("Games");
-  const { config, locale } = useLocaleConfig();
+  const { config } = useLocaleConfig();
   const title = formatGameTitle(game.gameName);
   const slug = gameSlug(game);
   const href = `/games/${slug}`;
   const imageSrc = assetUrl(game.iconUrl, config);
   const rating = displayRating(game);
   const tags = modTags(game);
-  const playHref = playUrl(config, {
-    gameCode: game.gameCode,
-    category: game.gameClassCode,
-    locale,
-  });
+  const playHref = playUrl(config);
   const cat = categoryLabel ?? game.gameClassCode;
 
   if (variant === "compact") {
     return (
       <Link
         href={href}
-        className="flex w-[88px] shrink-0 flex-col items-center gap-2 sm:w-[100px]"
+        className="link-card flex w-[88px] shrink-0 flex-col items-center gap-2 sm:w-[100px]"
       >
-        <div className="aspect-square w-full overflow-hidden rounded-2xl shadow-sm ring-1 ring-border">
+        <div className="link-card-media aspect-square w-full rounded-2xl shadow-sm ring-1 ring-border">
           <GameImage
             src={imageSrc}
             alt={title}
             priority={priority}
-            className="h-full w-full object-cover"
+            className="link-card-image h-full w-full object-cover"
           />
         </div>
         <span className="line-clamp-2 w-full text-center text-xs font-medium leading-tight text-text">
@@ -60,14 +56,14 @@ export function GameCard({
   }
 
   return (
-    <article className="card-surface group overflow-hidden hover:-translate-y-0.5">
+    <article className="card-surface link-card group overflow-hidden">
       <Link href={href} className="block p-3">
-        <div className="relative aspect-square w-full overflow-hidden rounded-xl ring-1 ring-border-light">
+        <div className="link-card-media relative aspect-square w-full rounded-xl ring-1 ring-border-light">
           <GameImage
             src={imageSrc}
             alt={title}
             priority={priority}
-            className="h-full w-full object-cover transition group-hover:scale-105"
+            className="link-card-image h-full w-full object-cover"
           />
           {game.platIcon && (
             <span className="absolute bottom-1.5 end-1.5 flex h-6 w-6 items-center justify-center rounded-md bg-surface-elevated p-0.5 shadow ring-1 ring-border">

@@ -64,12 +64,7 @@ export function GuideRankingList({
         const imageSrc = assetUrl(game.iconUrl, config);
         const rank = index + 1;
         const gameHref = pathWithCurrency(currency, `/games/${slug}`);
-        const playHref = playUrl(config, {
-          gameCode: game.gameCode,
-          category: game.gameClassCode,
-          locale,
-          currency,
-        });
+        const playHref = playUrl(config);
         const isTopThree = rank <= 3;
 
         return (

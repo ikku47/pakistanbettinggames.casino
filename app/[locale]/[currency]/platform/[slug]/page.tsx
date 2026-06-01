@@ -166,7 +166,7 @@ export default async function PlatformPage({ params, searchParams }: Props) {
             </p>
           )}
           <div className="mt-4">
-            <PlayCta category={plat.gameClassCode}>
+            <PlayCta>
               {t("playProvider", { platform: plat.platformName })}
             </PlayCta>
           </div>

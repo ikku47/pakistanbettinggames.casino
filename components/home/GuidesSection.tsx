@@ -36,7 +36,7 @@ export async function GuidesSection() {
           <li key={guide.slug}>
             <Link
               href={`/guides/${guide.slug}`}
-              className="card-surface group flex h-full flex-col p-4 hover:-translate-y-0.5"
+              className="card-surface link-card group flex h-full flex-col p-4"
             >
               <h3 className="text-sm font-semibold text-text group-hover:text-brand">
                 {t(`items.${guide.messageKey}.title`)}

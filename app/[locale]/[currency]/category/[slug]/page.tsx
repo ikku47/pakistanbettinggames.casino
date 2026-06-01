@@ -154,7 +154,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
             {description}
           </p>
           <div className="mt-4">
-            <PlayCta category={def.code}>
+            <PlayCta>
               {tGames("playCategory", { category: name })}
             </PlayCta>
           </div>

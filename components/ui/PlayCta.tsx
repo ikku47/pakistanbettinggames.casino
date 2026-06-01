@@ -11,8 +11,6 @@ interface PlayCtaProps {
   variant?: "primary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   mode?: "play" | "download";
-  gameCode?: string;
-  category?: string;
   block?: boolean;
 }
 
@@ -23,17 +21,13 @@ export function PlayCta({
   variant = "primary",
   size = "md",
   mode = "play",
-  gameCode,
-  category,
   block = false,
 }: PlayCtaProps) {
-  const { config, locale, currency } = useLocaleConfig();
+  const { config } = useLocaleConfig();
 
   const resolvedHref =
     href ??
-    (mode === "download"
-      ? downloadUrl(config)
-      : playUrl(config, { gameCode, category, locale, currency }));
+    (mode === "download" ? downloadUrl(config) : playUrl(config));
 
   const sizes = {
     sm: "px-3.5 py-2 text-xs rounded-lg",

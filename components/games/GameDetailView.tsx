@@ -191,8 +191,6 @@ export function GameDetailView({
               <PlayCta
                 size="lg"
                 className="!rounded-xl !border-0 !bg-white !px-8 !text-brand shadow-md hover:!bg-white/95"
-                gameCode={game.gameCode}
-                category={game.gameClassCode}
               >
                 {labels.playNow}
               </PlayCta>
@@ -213,8 +211,6 @@ export function GameDetailView({
             block
             size="lg"
             className="flex-1 !rounded-xl !border-0 !bg-white !text-brand hover:!bg-white/95"
-            gameCode={game.gameCode}
-            category={game.gameClassCode}
           >
             {labels.playNow}
           </PlayCta>
@@ -330,13 +326,7 @@ export function GameDetailView({
           )}
 
           <div className="hidden xl:block">
-            <PlayCta
-              block
-              size="lg"
-              className="!rounded-xl"
-              gameCode={game.gameCode}
-              category={game.gameClassCode}
-            >
+            <PlayCta block size="lg" className="!rounded-xl">
               {labels.playNow}
             </PlayCta>
           </div>
@@ -387,13 +377,7 @@ export function GameDetailView({
       {/* Mobile sticky CTA */}
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface/95 p-3 shadow-[0_-8px_30px_rgb(0_0_0/0.12)] backdrop-blur-lg xl:hidden pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-2 px-1">
-          <PlayCta
-            block
-            size="lg"
-            className="!rounded-xl"
-            gameCode={game.gameCode}
-            category={game.gameClassCode}
-          >
+          <PlayCta block size="lg" className="!rounded-xl">
             {labels.playNow}
           </PlayCta>
           <PlayCta

@@ -64,14 +64,14 @@ export async function PlatformStrip() {
             <Link
               key={plat.platformId}
               href={`/platform/${plat.slug}`}
-              className="card-surface group flex flex-col items-center gap-2 p-4 text-center hover:-translate-y-0.5"
+              className="card-surface link-card group flex flex-col items-center gap-2 p-4 text-center"
             >
-              <span className="flex h-12 w-full items-center justify-center rounded-lg bg-black p-2">
+              <span className="link-card-media flex h-12 w-full items-center justify-center rounded-lg bg-black p-2">
                 {iconSrc ? (
                   <GameImage
                     src={iconSrc}
                     alt={plat.platformName}
-                    className="max-h-full max-w-full object-contain"
+                    className="link-card-image max-h-full max-w-full object-contain"
                   />
                 ) : (
                   <span className="text-xs font-bold text-brand">

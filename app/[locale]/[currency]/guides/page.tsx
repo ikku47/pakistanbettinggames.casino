@@ -104,7 +104,7 @@ export default async function GuidesIndexPage({ params }: Props) {
           <li key={guide.slug}>
             <Link
               href={`/guides/${guide.slug}`}
-              className="card-surface group flex h-full flex-col p-5 transition hover:-translate-y-0.5 sm:p-6"
+              className="card-surface link-card group flex h-full flex-col p-5 sm:p-6"
             >
               <div className="flex items-start justify-between gap-3">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-light text-sm font-bold text-brand">
@@ -112,7 +112,7 @@ export default async function GuidesIndexPage({ params }: Props) {
                 </span>
                 <ChevronRight
                   size={18}
-                  className="shrink-0 text-text-muted transition group-hover:translate-x-0.5 group-hover:text-brand"
+                  className="link-card-chevron-visible shrink-0 text-text-muted group-hover:text-brand"
                   aria-hidden
                 />
               </div>

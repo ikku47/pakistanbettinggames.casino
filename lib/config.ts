@@ -1,10 +1,10 @@
-import type { AppLocale } from "@/i18n/routing";
 import type { SystemConfig } from "./types";
 
 export const siteConfig = {
   domain: process.env.NEXT_PUBLIC_SITE_URL ?? "https://pakistanbettinggames.casino",
   utmSource: "pakistanbettinggames",
-  utmMedium: "seo",
+  inviteCode:
+    process.env.NEXT_PUBLIC_INVITE_CODE ?? "ls79qWwK",
 } as const;
 
 export const apiConfig = {
@@ -28,26 +28,15 @@ export function assetUrl(
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
-export function playUrl(
-  config: SystemConfig,
-  opts?: {
-    gameCode?: string;
-    category?: string;
-    locale?: AppLocale;
-    currency?: string;
-  },
-): string {
+/** Casino / H5 entry URL — `inviteCode` + `utm_source` only. */
+export function playUrl(config: SystemConfig): string {
   const raw =
     config.app_call_h5_domain ||
     process.env.NEXT_PUBLIC_PLATFORM_URL ||
     "https://h5.wdclus0001.com";
   const url = new URL(raw.endsWith("/") ? raw : `${raw}/`);
+  url.searchParams.set("inviteCode", siteConfig.inviteCode);
   url.searchParams.set("utm_source", siteConfig.utmSource);
-  url.searchParams.set("utm_medium", siteConfig.utmMedium);
-  if (opts?.gameCode) url.searchParams.set("game", opts.gameCode);
-  if (opts?.category) url.searchParams.set("category", opts.category);
-  if (opts?.locale) url.searchParams.set("lang", opts.locale);
-  if (opts?.currency) url.searchParams.set("currency", opts.currency);
   return url.toString();
 }
 

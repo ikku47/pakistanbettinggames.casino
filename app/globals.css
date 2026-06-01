@@ -112,6 +112,56 @@ body {
   box-shadow: var(--shadow-md);
 }
 
+/* Link tiles: shell stays put; optional media zoom inside overflow clip */
+.link-card.card-surface {
+  transition:
+    border-color 0.25s ease-in-out,
+    box-shadow 0.25s ease-in-out;
+}
+
+.link-card-media {
+  overflow: hidden;
+}
+
+.link-card-image {
+  transform: scale(1);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+@media (hover: hover) {
+  .link-card:hover .link-card-image,
+  .link-card:focus-within .link-card-image {
+    transform: scale(1.06);
+  }
+
+  .link-card:hover .link-card-chevron,
+  .link-card:focus-within .link-card-chevron {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+}
+
+.link-card-chevron {
+  opacity: 0;
+  transition:
+    opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-card-chevron-visible {
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s ease-in-out;
+}
+
+@media (hover: hover) {
+  .link-card:hover .link-card-chevron-visible,
+  .link-card:focus-within .link-card-chevron-visible {
+    transform: translateX(2px);
+  }
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
