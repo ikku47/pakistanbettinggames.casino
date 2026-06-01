@@ -27,6 +27,8 @@ import { formatGameTitle, gameSlug } from "@/lib/utils";
 import { resolvePageParamsWith } from "@/lib/page-params";
 import type { Metadata } from "next";
 
+export const revalidate = 2592000;
+
 type Props = { params: Promise<{ locale: string; currency: string; slug: string }> };
 
 export function generateStaticParams() {

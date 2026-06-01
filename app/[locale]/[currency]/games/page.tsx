@@ -16,6 +16,8 @@ import {
 } from "@/lib/seo";
 import { formatGameTitle, gameSlug } from "@/lib/utils";
 
+export const revalidate = 2592000;
+
 type Props = {
   params: Promise<{ locale: string; currency: string }>;
   searchParams: Promise<{ page?: string; q?: string }>;

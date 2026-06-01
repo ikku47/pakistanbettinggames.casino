@@ -8,13 +8,11 @@ import { PageContainer } from "@/components/layout/PageContainer";
 import { GameImage } from "@/components/games/GameImage";
 import { PlayCta } from "@/components/ui/PlayCta";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { fetchGameList, fetchPlatformCatalog } from "@/lib/api";
+import { fetchGameList } from "@/lib/api";
+import { getCachedGameClasses } from "@/lib/catalog-data";
+import { buildPlatformCatalog, getPlatformBySlug, platformIconUrl } from "@/lib/platforms";
 import { getCategoryByCode } from "@/lib/categories";
 import { getSystemConfig } from "@/lib/system-config";
-import {
-  getPlatformBySlug,
-  platformIconUrl,
-} from "@/lib/platforms";
 import {
   absoluteUrl,
   breadcrumbJsonLd,
@@ -26,19 +24,23 @@ import { resolvePageParamsWith } from "@/lib/page-params";
 import type { AppLocale } from "@/i18n/routing";
 import type { Metadata } from "next";
 
+export const revalidate = 2592000;
+
 type Props = {
   params: Promise<{ locale: string; currency: string; slug: string }>;
   searchParams: Promise<{ page?: string }>;
 };
 
 export async function generateStaticParams() {
-  const catalog = await fetchPlatformCatalog("en-PK" as AppLocale);
+  const catalog = buildPlatformCatalog(
+    await getCachedGameClasses("en-PK" as AppLocale),
+  );
   return catalog.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, currency, slug } = await resolvePageParamsWith(params);
-  const catalog = await fetchPlatformCatalog(locale);
+  const catalog = buildPlatformCatalog(await getCachedGameClasses(locale));
   const plat = getPlatformBySlug(slug, catalog);
   if (!plat) return { title: "Not Found" };
 
@@ -74,7 +76,7 @@ export default async function PlatformPage({ params, searchParams }: Props) {
   const { locale, currency, slug } = await resolvePageParamsWith(params);
   setRequestLocale(locale);
 
-  const catalog = await fetchPlatformCatalog(locale);
+  const catalog = buildPlatformCatalog(await getCachedGameClasses(locale));
   const plat = getPlatformBySlug(slug, catalog);
   if (!plat) notFound();
 

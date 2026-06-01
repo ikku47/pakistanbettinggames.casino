@@ -1,6 +1,7 @@
 import { unstable_cache } from "next/cache";
 import type { AppLocale } from "@/i18n/routing";
 import { toApiContentLanguage } from "@/i18n/api-locale";
+import { PAGE_REVALIDATE_SECONDS } from "./cache";
 import { apiConfig } from "./config";
 import type { ApiResponse, SystemConfig } from "./types";
 
@@ -79,7 +80,7 @@ export async function getSystemConfig(
   const cached = unstable_cache(
     async () => fetchSystemConfigRaw(contentLanguage),
     ["system-config", contentLanguage],
-    { revalidate: apiConfig.revalidateSeconds },
+    { revalidate: PAGE_REVALIDATE_SECONDS },
   );
 
   return (await cached()) ?? defaultConfig;

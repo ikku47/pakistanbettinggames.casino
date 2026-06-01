@@ -5,7 +5,8 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { GameImage } from "@/components/games/GameImage";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { fetchPlatformCatalog } from "@/lib/api";
+import { getCachedGameClasses } from "@/lib/catalog-data";
+import { buildPlatformCatalog } from "@/lib/platforms";
 import { getCategoryByCode } from "@/lib/categories";
 import { getSystemConfig } from "@/lib/system-config";
 import { platformIconUrl } from "@/lib/platforms";
@@ -19,6 +20,8 @@ import {
 import { resolvePageParams } from "@/lib/page-params";
 import { ChevronRight } from "lucide-react";
 import type { Metadata } from "next";
+
+export const revalidate = 2592000;
 
 type Props = { params: Promise<{ locale: string; currency: string }> };
 
@@ -45,7 +48,7 @@ export default async function PlatformsIndexPage({ params }: Props) {
     getTranslations({ locale, namespace: "Platforms" }),
     getTranslations({ locale, namespace: "Common" }),
     getTranslations({ locale, namespace: "Categories" }),
-    fetchPlatformCatalog(locale),
+    getCachedGameClasses(locale).then(buildPlatformCatalog),
     getSystemConfig(locale),
   ]);
 

@@ -69,7 +69,7 @@ Or use a single build step: **`bun run deploy`** and leave deploy command empty 
 
 Add the same environment variables as `.env.local` in the Cloudflare project settings.
 
-More detail: [docs/CLOUDFLARE.md](docs/CLOUDFLARE.md)
+More detail: [docs/CLOUDFLARE.md](docs/CLOUDFLARE.md). **Workers Free:** create the R2 cache bucket once (`bunx wrangler r2 bucket create pakistanbettinggames-inc-cache`) so pages stay cached and avoid Error 1102.
 
 ### Middleware note
 

@@ -5,14 +5,11 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { GameDetailView } from "@/components/games/GameDetailView";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { fetchGameList, findGameById } from "@/lib/api";
 import {
-  findGameById,
-  fetchAllPlatIcons,
-  fetchGameList,
-  fetchPlatformCatalog,
-  fetchPlatformIndex,
-  fetchPopularGames,
-} from "@/lib/api";
+  getCachedPopularGames,
+  getCatalogBootstrap,
+} from "@/lib/catalog-data";
 import { resolveGamePlatform } from "@/lib/platforms";
 import { getCategoryByCode } from "@/lib/categories";
 import { assetUrl } from "@/lib/config";
@@ -24,6 +21,8 @@ import { breadcrumbJsonLd, buildMetadata, gameJsonLd } from "@/lib/seo";
 import { formatGameTitle, parseGameSlug } from "@/lib/utils";
 import type { AppLocale } from "@/i18n/routing";
 import type { Metadata } from "next";
+
+export const revalidate = 2592000;
 
 type Props = { params: Promise<{ locale: string; currency: string; slug: string }> };
 
@@ -65,7 +64,7 @@ async function fetchRelatedGames(
   game: NonNullable<Awaited<ReturnType<typeof findGameById>>>,
 ) {
   if (game.gameClassCode === "RM_TEMP") {
-    const popular = await fetchPopularGames(locale, 12);
+    const popular = await getCachedPopularGames(locale, 12);
     return popular.filter((g) => g.id !== game.id).slice(0, 8);
   }
 
@@ -77,7 +76,7 @@ async function fetchRelatedGames(
   const fromList = page.records.filter((g) => g.id !== game.id);
   if (fromList.length >= 4) return fromList.slice(0, 8);
 
-  const popular = await fetchPopularGames(locale, 12);
+  const popular = await getCachedPopularGames(locale, 12);
   return popular.filter((g) => g.id !== game.id).slice(0, 8);
 }
 
@@ -90,10 +89,7 @@ export default async function GameDetailPage({ params }: Props) {
 
   const [
     game,
-    config,
-    platformIndex,
-    platformCatalog,
-    partnerIcons,
+    catalog,
     t,
     tCat,
     tCommon,
@@ -102,10 +98,7 @@ export default async function GameDetailPage({ params }: Props) {
     tPartners,
   ] = await Promise.all([
     findGameById(locale, id),
-    getSystemConfig(locale),
-    fetchPlatformIndex(locale),
-    fetchPlatformCatalog(locale),
-    fetchAllPlatIcons(locale),
+    getCatalogBootstrap(locale),
     getTranslations({ locale, namespace: "GameDetail" }),
     getTranslations({ locale, namespace: "Categories" }),
     getTranslations({ locale, namespace: "Common" }),
@@ -113,6 +106,13 @@ export default async function GameDetailPage({ params }: Props) {
     getTranslations({ locale, namespace: "Nav" }),
     getTranslations({ locale, namespace: "Partners" }),
   ]);
+
+  const {
+    config,
+    platformIndex,
+    platformCatalog,
+    partnerIcons,
+  } = catalog;
 
   if (!game) notFound();
 

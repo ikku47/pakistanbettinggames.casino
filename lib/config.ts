@@ -1,3 +1,4 @@
+import { PAGE_REVALIDATE_SECONDS } from "./cache";
 import type { SystemConfig } from "./types";
 
 export const siteConfig = {
@@ -12,7 +13,9 @@ export const apiConfig = {
   bearerToken: process.env.GAME_API_TOKEN ?? "",
   platform: process.env.GAME_API_PLATFORM ?? "3",
   apiVersion: "v1",
-  revalidateSeconds: Number(process.env.GAME_API_REVALIDATE ?? 3600),
+  revalidateSeconds: Number(
+    process.env.GAME_API_REVALIDATE ?? PAGE_REVALIDATE_SECONDS,
+  ),
 } as const;
 
 export function assetUrl(
