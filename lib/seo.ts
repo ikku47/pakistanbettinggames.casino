@@ -9,6 +9,8 @@ import { formatGameTitle } from "./utils";
 export const OG_COVER_PATH = "/og-cover.jpg";
 export const OG_COVER_WIDTH = 1731;
 export const OG_COVER_HEIGHT = 909;
+/** CSS aspect-ratio value matching `public/og-cover.jpg`. */
+export const OG_COVER_ASPECT_RATIO = OG_COVER_WIDTH / OG_COVER_HEIGHT;
 
 /** Absolute URL for the default social share image (`public/og-cover.jpg`). */
 export function defaultOgImageUrl(): string {

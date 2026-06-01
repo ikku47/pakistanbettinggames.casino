@@ -9,7 +9,6 @@ import { PlayCta } from "@/components/ui/PlayCta";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { GameSearch } from "@/components/search/GameSearch";
 import { ThemeToggle } from "./ThemeToggle";
-import { CurrencySelector } from "@/components/currency/CurrencySelector";
 import { SiteLogo } from "@/components/brand/SiteLogo";
 import { cn } from "@/lib/utils";
 
@@ -29,45 +28,51 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-surface/90 shadow-sm backdrop-blur-md dark:bg-surface/95">
       <div className="bg-gradient-to-r from-brand to-brand-dark">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3.5 sm:px-6">
-          <Link href="/" className="group flex items-center gap-3">
-            <SiteLogo size={36}  priority />
-            <div className="leading-tight text-white">
-              <span className="block text-lg font-bold tracking-tight">
+        <div className="mx-auto flex max-w-6xl items-center gap-2 px-3 py-2.5 sm:gap-3 sm:px-6 sm:py-3.5">
+          <Link
+            href="/"
+            className="group flex min-w-0 flex-1 items-center gap-2 sm:flex-none sm:gap-3"
+          >
+            <SiteLogo size={32} priority className="shrink-0 sm:hidden" />
+            <SiteLogo
+              size={36}
+              priority
+              className="hidden shrink-0 sm:block"
+            />
+            <div className="min-w-0 leading-tight text-white">
+              <span className="block truncate text-base font-bold tracking-tight sm:text-lg">
                 {t("Meta.shortName")}
               </span>
-              <span className="block text-[10px] font-semibold uppercase tracking-[0.12em] text-white/75">
+              <span className="block truncate text-[9px] font-semibold uppercase tracking-wide text-white/75 sm:text-[10px] sm:tracking-[0.12em]">
                 {t("Meta.tagline")}
               </span>
             </div>
           </Link>
 
-          <div className="hidden flex-1 justify-center px-4 md:flex">
+          <div className="hidden min-w-0 flex-1 justify-center px-4 md:flex">
             <GameSearch className="max-w-md" variant="header" />
           </div>
 
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <CurrencySelector className="hidden sm:inline-flex" />
+          <div className="ms-auto flex shrink-0 items-center gap-1 sm:gap-2">
             <ThemeToggle />
-            <LanguageSwitcher className="hidden sm:flex" />
+            <LanguageSwitcher />
             <PlayCta
               size="sm"
               variant="outline"
-              className="!rounded-lg !border-white !bg-white !font-bold !text-brand shadow-sm hover:!bg-white/95"
+              className="shrink-0 whitespace-nowrap !rounded-lg !border-white !bg-white !px-3 !py-2 !text-xs !font-bold !text-brand shadow-sm hover:!bg-white/95 sm:!px-3.5 sm:!text-xs"
             >
-              {t("Nav.enterCasino")}
+              <span className="sm:hidden">{t("Nav.enterCasinoShort")}</span>
+              <span className="hidden sm:inline">{t("Nav.enterCasino")}</span>
             </PlayCta>
           </div>
         </div>
-        <div className="border-t border-white/10 px-4 pb-3 md:hidden">
+        <div className="border-t border-white/10 px-3 pb-2.5 sm:px-4 sm:pb-3 md:hidden">
           <GameSearch variant="header" />
         </div>
       </div>
 
       <nav aria-label="Main navigation">
-        <div className="mx-auto flex max-w-6xl items-center gap-0.5 overflow-x-auto px-3 py-2 sm:px-5 scrollbar-hide md:gap-1">
-          <CurrencySelector variant="nav" className="me-0.5 shrink-0 md:hidden" />
-          <ThemeToggle variant="nav" className="me-0.5 shrink-0 md:hidden" />
+        <div className="mx-auto flex max-w-6xl items-center gap-0.5 overflow-x-auto px-2 py-2 sm:px-5 scrollbar-hide md:gap-1 md:px-5">
           <Link
             href="/"
             className={navLinkClass("/")}

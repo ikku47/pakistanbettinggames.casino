@@ -146,9 +146,6 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           </div>
         )}
         <div className="min-w-0 flex-1">
-          <span className="inline-block rounded bg-brand-light px-2 py-0.5 text-xs font-semibold text-brand">
-            {def.code}
-          </span>
           <h1 className="mt-2 text-2xl font-bold text-text sm:text-3xl">{name}</h1>
           <p className="mt-2 text-sm leading-relaxed text-text-secondary">
             {description}

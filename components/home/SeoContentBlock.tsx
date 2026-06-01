@@ -2,9 +2,11 @@
 
 import { useTranslations } from "next-intl";
 import { useLocaleConfig } from "@/components/providers/LocaleConfigProvider";
+import { SeoKeywordPills } from "@/components/seo/SeoKeywordPills";
 
 export function SeoContentBlock() {
   const t = useTranslations("Home");
+  const tMeta = useTranslations("Meta");
   const { config } = useLocaleConfig();
 
   return (
@@ -19,6 +21,12 @@ export function SeoContentBlock() {
             <li key={key}>{t(key)}</li>
           ))}
         </ul>
+        <div className="border-t border-border pt-5">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-text-muted">
+            {t("keywordTopicsLabel")}
+          </p>
+          <SeoKeywordPills items={tMeta("keywordTags")} />
+        </div>
       </div>
     </section>
   );

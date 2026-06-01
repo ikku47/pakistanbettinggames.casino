@@ -5,18 +5,8 @@ import { GameImage } from "@/components/games/GameImage";
 import type { AppLocale } from "@/i18n/routing";
 import { fetchPlatformCatalog } from "@/lib/api";
 import { getSystemConfig } from "@/lib/system-config";
+import { FEATURED_PLATFORM_SLUGS } from "@/lib/featured-platforms";
 import { platformIconUrl } from "@/lib/platforms";
-
-const FEATURED_SLUGS = [
-  "pg2",
-  "jili",
-  "cq9",
-  "lucky-sport",
-  "jdb",
-  "fc",
-  "joker",
-  "dg",
-];
 
 export async function PlatformStrip() {
   const locale = (await getLocale()) as AppLocale;
@@ -27,7 +17,7 @@ export async function PlatformStrip() {
   ]);
 
   const bySlug = new Map(catalog.map((p) => [p.slug, p]));
-  const featured = FEATURED_SLUGS.map((s) => bySlug.get(s)).filter(
+  const featured = FEATURED_PLATFORM_SLUGS.map((s) => bySlug.get(s)).filter(
     (p): p is NonNullable<typeof p> => p != null,
   );
   const items =
