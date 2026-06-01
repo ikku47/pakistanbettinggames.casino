@@ -1,0 +1,417 @@
+{
+  "Meta": {
+    "siteName": "巴基斯坦博彩游戏",
+    "shortName": "PBG",
+    "tagline": "博彩游戏",
+    "description": "巴基斯坦最佳在线博彩游戏——老虎机、真人娱乐场、体育博彩、捕鱼和炸金花。支持 JazzCash 与 EasyPaisa 快速充值。",
+    "titleSuffix": "在线娱乐场与博彩",
+    "keywords": "巴基斯坦博彩, 在线娱乐场, 板球博彩, 老虎机, 真人娱乐场, jazzcash"
+  },
+  "Nav": {
+    "allGames": "游戏",
+    "help": "帮助",
+    "enterCasino": "立即玩",
+    "downloadApp": "下载应用",
+    "open": "更多",
+    "searchPlaceholder": "搜索游戏...",
+    "guides": "Guides"
+  },
+  "Ticker": {
+    "items": "JazzCash 充值已开通|PSL 赛季专题|Fortune Ox 热门|炸金花开放|Aviator 24/7|EasyPaisa 提款|PG 与 JILI 老虎机|板球滚球赔率"
+  },
+  "Header": {
+    "edition": "巴基斯坦 · 真钱 · H5",
+    "cities": "卡拉奇 / 拉合尔 / 伊斯兰堡"
+  },
+  "Home": {
+    "heroBadge": "编辑推荐 · 每日更新",
+    "heroSubtitle": "巴基斯坦在线娱乐场与博彩游戏",
+    "heroCta": "打开娱乐场",
+    "heroBrowse": "浏览列表",
+    "factsTitle": "快速了解",
+    "factDeposits": "充值",
+    "factDepositsVal": "JazzCash · EasyPaisa",
+    "factGames": "游戏",
+    "factGamesVal": "老虎机 · 体育 · 真人",
+    "factAccess": "访问",
+    "factAccessVal": "浏览器 — 无需 APK",
+    "factPayouts": "提款",
+    "factPayoutsVal": "分钟到账",
+    "ageNotice": "18+ · 理性博彩",
+    "featuredTitle": "手机必备热门",
+    "featuredMore": "+ 更多",
+    "hotListTitle": "最新游戏",
+    "hotListSubtitle": "玩家正在打开的游戏——来自实时接口。",
+    "hotListLink": "完整目录",
+    "sectionsTitle": "分类",
+    "sectionsSubtitle": "选择板块",
+    "ctaEyebrow": "一键即达",
+    "ctaTitle": "您的座位已备好",
+    "ctaBody": "手机娱乐场。注册一次，{currency} 充值，畅玩索引全部游戏。",
+    "ctaButton": "启动娱乐场",
+    "seoTitle": "巴基斯坦最佳在线博彩游戏 (2026)",
+    "seoP1": "老虎机、崩盘类、炸金花、捕鱼与板球——{currency} H5 平台真钱游戏。",
+    "seoP2": "对接实时 API 更新——类似 APK 索引的清晰目录。",
+    "seoWhy": "为何使用本索引",
+    "seoLi1": "平台支持 JazzCash 与 EasyPaisa",
+    "seoLi2": "每个游戏独立 SEO 页面",
+    "seoLi3": "浏览器即玩，无需 APK",
+    "seoLi4": "板球、Aviator、PG、JILI 等热搜词"
+  },
+  "Categories": {
+    "popular": {
+      "name": "热门",
+      "description": "当前最受欢迎的游戏——热门老虎机与崩盘类。",
+      "seoTitle": "热门博彩游戏"
+    },
+    "slots": {
+      "name": "老虎机",
+      "description": "PG Soft、JILI、CQ9 及 WD 独家老虎机。",
+      "seoTitle": "在线老虎机"
+    },
+    "sports": {
+      "name": "体育",
+      "description": "板球、足球——PSL、IPL 滚球赔率。",
+      "seoTitle": "体育博彩 | 板球"
+    },
+    "fishing": {
+      "name": "捕鱼",
+      "description": "捕鱼街机——JILI、CQ9、JDB 多人房间。",
+      "seoTitle": "捕鱼游戏"
+    },
+    "cards": {
+      "name": "棋牌",
+      "description": "炸金花、拉米、扑克及经典桌游。",
+      "seoTitle": "炸金花与棋牌"
+    },
+    "liveCasino": {
+      "name": "真人娱乐场",
+      "description": "真人荷官百家乐、轮盘、二十一点 HD 直播。",
+      "seoTitle": "真人娱乐场"
+    }
+  },
+  "Search": {
+    "placeholder": "搜索游戏...",
+    "noResults": "未找到游戏。",
+    "viewAll": "查看 \"{query}\" 的全部结果"
+  },
+  "Games": {
+    "catalogTitle": "游戏目录",
+    "searchTitle": "搜索：{query}",
+    "searchDesc": "找到 {count} 款与 \"{query}\" 匹配的游戏。",
+    "searchEmpty": "未找到 \"{query}\" 相关游戏。",
+    "searchMetaTitle": "搜索 {query}",
+    "searchMetaDesc": "查找与 {query} 匹配的在线博彩游戏。",
+    "catalogEyebrow": "完整列表",
+    "catalogDesc": "接口中的全部老虎机——分页浏览，查看详情后点击开始。",
+    "pageOf": "第 {current} 页，共 {pages} 页",
+    "titlesIn": "{category} 共 {total} 款",
+    "allTitle": "全部在线博彩游戏",
+    "allDesc": "完整目录。查看详情或点击开始。",
+    "breadcrumbCatalog": "目录",
+    "empty": "暂无内容——请等待下次同步。",
+    "categoryEmpty": "未加载 {category}——请在娱乐场查看完整列表。",
+    "playCategory": "玩 {category}",
+    "sectionLabel": "板块 · {code}",
+    "info": "详情",
+    "play": "开始",
+    "details": "了解更多",
+    "trending": "热门",
+    "featuredBlurb": "手机即玩——{currency} 钱包，秒开。",
+    "altSuffix": "在线博彩游戏"
+  },
+  "GameDetail": {
+    "playNow": "玩 {title}",
+    "intro": "为搜索 {title} 的玩家准备——{currency} 娱乐场，无需 APK。",
+    "code": "代码",
+    "category": "分类",
+    "platform": "平台",
+    "type": "类型",
+    "realMoney": "真钱",
+    "casino": "娱乐场",
+    "howToPlay": "如何开始",
+    "step1": "点击开始——浏览器打开娱乐场。",
+    "step2": "手机号注册。",
+    "step3": "JazzCash、EasyPaisa 或 USDT 充值。",
+    "step4": "在 {category} 中找到 {title}。",
+    "metaTitle": "{title} — 在线游戏",
+    "metaDesc": "在线玩 {title}（{category}）。JazzCash 与 EasyPaisa。H5 即时进入。",
+    "highlightsTitle": "关于本游戏",
+    "highlight1": "浏览器即时游玩 — 无需 APK",
+    "highlight2": "JazzCash 与 EasyPaisa 安全 {currency} 钱包",
+    "highlight3": "移动端优化 — 可添加到主屏幕",
+    "relatedTitle": "猜你喜欢",
+    "onlineNow": "在线中",
+    "editorsPick": "热门",
+    "viewCategory": "浏览全部 {category}",
+    "gameInfo": "游戏信息"
+  },
+  "Faq": {
+    "title": "常见问题",
+    "subtitle": "充值、提现、游戏与安全游玩说明。",
+    "metaTitle": "常见问题",
+    "metaDesc": "Pakistan Betting Games — JazzCash、EasyPaisa、H5、老虎机、体育博彩与负责任游戏。",
+    "items": {
+      "q1": "Pakistan Betting Games 是什么？",
+      "a1": "pakistanbettinggames.casino 提供老虎机、体育博彩、真人娱乐场、捕鱼和棋牌目录。点击开始打开 H5 娱乐场。",
+      "q2": "如何用 JazzCash 或 EasyPaisa 充值？",
+      "a2": "打开娱乐场，进入钱包 → 充值，选择 JazzCash、EasyPaisa、银行或 USDT。通常几分钟到账。",
+      "q3": "需要下载 APK 吗？",
+      "a3": "多数游戏可在浏览器中运行，可添加到主屏幕。",
+      "q4": "巴基斯坦玩家最常玩哪些游戏？",
+      "a4": "Aviator、Fortune Ox、Teen Patti、板球/PSL、JILI 捕鱼、真人百家乐。",
+      "q5": "在线博彩合法吗？",
+      "a5": "取决于地区与年龄。仅限 18 岁以上，请遵守当地法律。",
+      "q6": "提现需要多久？",
+      "a6": "完成 KYC 后，JazzCash/EasyPaisa 提现通常几分钟到几小时。",
+      "q7": "如何搜索某款游戏？",
+      "a7": "使用顶部搜索栏，至少输入两个字母，如 Fortune 或 Aviator。",
+      "q8": "支持哪些支付方式？",
+      "a8": "JazzCash、EasyPaisa、USDT 及银行转账（视账户而定）。",
+      "q9": "游戏是否公平并有牌照？",
+      "a9": "来自 PG、JILI、CQ9、Pragmatic 等持牌供应商。关于页有 GLI、MGA、PAGCOR、UKGC 认证说明。",
+      "q10": "iPhone 和 Android 能玩吗？",
+      "a10": "可以，使用现代移动浏览器。也可下载原生应用。",
+      "q11": "最低充值是多少？",
+      "a11": "因支付方式和活动而异，登录后收银台会显示限额。",
+      "q12": "账户问题如何联系客服？",
+      "a12": "登录后使用应用内在线客服，或通过任意「开始」按钮进入娱乐场。"
+    }
+  },
+  "About": {
+    "title": "关于 Pakistan Betting Games",
+    "metaTitle": "关于",
+    "metaDesc": "Pakistan Betting Games (pakistanbettinggames.casino) — 真人娱乐场、老虎机、体育博彩、捕鱼与棋牌，持 MGA 国际牌照。",
+    "p1": "Pakistan Betting Games (pakistanbettinggames.casino) 是享誉全球的在线娱乐品牌，整合真人娱乐场、棋牌、老虎机、捕鱼与体育博彩，为全球玩家提供安全、公平且多元化的游戏体验。",
+    "p2": "公司持有马耳他博彩管理局 (MGA) 颁发的国际博彩牌照，并注册于英属维尔京群岛 (BVI)。凭借多家权威机构的多项合规认证，pakistanbettinggames.casino 具备在全球范围内合法开展博彩业务的完整资质。",
+    "p3": "仅限 18 岁以上。请理性博彩，切勿超出承受能力投注。"
+  },
+  "Partners": {
+    "title": "游戏合作伙伴",
+    "subtitle": "持牌供应商 — PG、JILI、CQ9、Pragmatic 等，同一钱包畅玩。",
+    "footerSubtitle": "可信平台合作伙伴"
+  },
+  "Licenses": {
+    "sectionTitle": "认证与监管监督",
+    "sectionIntro": "本平台上的游戏与系统符合国际认可的测试、许可与监督框架。这些标识代表对公平性、安全性与运营责任的独立审查。",
+    "footnote": "认证与许可标识仅供透明展示。具体游戏或支付方式可能因地区而异。游玩前请确认当地法律。",
+    "items": {
+      "gli": {
+        "title": "GLI 完整随机算法",
+        "description": "Gaming Laboratories International (GLI) 认证随机数生成器与游戏逻辑，确保结果统计公平且运营商无法预测或操控。"
+      },
+      "mga": {
+        "title": "马耳他博彩管理局 (MGA) 认证",
+        "description": "MGA 是欧盟层级的监管机构，为远程博彩运营商颁发牌照，并执行反洗钱、玩家资金隔离与争议解决要求。"
+      },
+      "pagcor": {
+        "title": "PAGCOR 博彩牌照",
+        "description": "菲律宾娱乐与博彩公司 (PAGCOR) 授权并监督菲律宾境内持牌博彩，包括合规审计与负责任博彩标准。"
+      },
+      "ukgc": {
+        "title": "英国博彩委员会 (UKGC) 监督",
+        "description": "UKGC 监管英国商业博彩，要求持牌运营商保护未成年人、提供自我排除工具并满足严格的广告与技术标准。"
+      }
+    }
+  },
+  "Footer": {
+    "theEnd": "完",
+    "blurb": "游戏列表。18+。理性博彩。",
+    "playCol": "游戏",
+    "infoCol": "信息",
+    "hotList": "热门榜",
+    "sportsbook": "体育博彩",
+    "licenses": "认证",
+    "llms": "LLMs.txt",
+    "copyright": "© {year} {siteName}",
+    "disclaimer": "与 Google Play 或 App Store 无关联",
+    "guidesLink": "Guides & rankings",
+    "currencies": "钱包币种"
+  },
+  "Currency": {
+    "selectLabel": "钱包币种",
+    "indexEyebrow": "与语言无关",
+    "indexTitle": "娱乐场钱包币种",
+    "indexSubtitle": "任意语言均可使用 PKR、USD、INR、VND、IDR — 币种不随语言绑定。",
+    "indexMetaDescription": "支持 PKR、USD、INR、VND、IDR 充值游戏。切换语言不影响钱包币种。",
+    "indexKeywords": "pkr casino, usd betting, inr casino, 多币种娱乐场",
+    "indexListName": "支持的币种",
+    "viewHub": "币种指南",
+    "hubEyebrow": "{currency} 钱包",
+    "hubTitle": "{currency} 在线娱乐场与博彩",
+    "hubLead": "{symbol}（{currency}）钱包 — 各语言共享同一游戏目录。",
+    "hubMetaDescription": "使用 {currency}（{symbol}）钱包玩老虎机、崩盘类、炸金花与板球。语言可换，币种自选。",
+    "hubP1": "面向搜索「{currency} casino」的玩家 — 与界面语言无关。",
+    "hubP2": "在 H5 选择 {currency}，各语言页面均有效。",
+    "hubLi1": "充值与余额以 {currency} 显示",
+    "hubLi2": "四种语言共用钱包",
+    "hubLi3": "每种币种独立 SEO 页面",
+    "hubCta": "用 {currency} 游玩",
+    "hubBrowse": "浏览游戏",
+    "localeNote": "语言与钱包币种相互独立，可在页头切换币种。",
+    "otherWallets": "其他钱包",
+    "codes": {
+      "PKR": { "blurb": "巴基斯坦卢比", "keywords": "pkr casino, pkr 博彩" },
+      "USD": { "blurb": "美元", "keywords": "usd casino, 美元钱包" },
+      "INR": { "blurb": "印度卢比", "keywords": "inr casino" },
+      "VND": { "blurb": "越南盾", "keywords": "vnd casino" },
+      "IDR": { "blurb": "印尼盾", "keywords": "idr casino" }
+    }
+  },
+  "Common": {
+    "home": "首页",
+    "faq": "常见问题",
+    "about": "关于",
+    "notFound": "未找到",
+    "prev": "上一页",
+    "next": "下一页",
+    "breadcrumb": "面包屑"
+  },
+  "LanguageSwitcher": {
+    "label": "语言"
+  },
+  "Theme": {
+    "light": "浅色模式",
+    "dark": "深色模式",
+    "switchToLight": "切换到浅色模式",
+    "switchToDark": "切换到深色模式"
+  },
+  "Guides": {
+    "indexTitle": "Player guides & rankings",
+    "indexMetaTitle": "Guides & game rankings",
+    "indexMetaDesc": "Data-backed rankings and how-to guides for online betting in Pakistan — slots, live casino, cricket, JazzCash deposits, and H5 play.",
+    "indexIntro": "Short, practical articles built from our live game catalog. Rankings refresh from the same feed as the homepage — not generic listicles.",
+    "homeTeaser": "Rankings and how-tos backed by live game data.",
+    "viewAll": "All guides",
+    "readGuide": "Read guide",
+    "guideLabel": "Guide",
+    "updatedNote": "Rankings reflect the current platform feed and may change as new titles go live.",
+    "rank": "Rank",
+    "rankingCount": "{count} games ranked",
+    "viewDetails": "Details",
+    "tryThese": "Popular games to try next",
+    "ctaText": "Ready to play? Open the casino in your browser — no APK required.",
+    "ctaButton": "Launch casino",
+    "items": {
+      "topGames": {
+        "title": "Top betting games in Pakistan (live ranking)",
+        "teaser": "The titles players open most right now — crash, slots, and instant games from our feed.",
+        "metaTitle": "Top Betting Games Pakistan 2026",
+        "metaDesc": "Live ranking of the most played online betting games in Pakistan — Fortune Ox, Aviator-style crash, teen patti, and more with Play links.",
+        "intro": "This list is built from the platform’s popular-game feed, not a static blog template. When a title spikes during PSL season or a new PG slot launches, it can move up here.",
+        "rankingTitle": "Top 12 right now",
+        "rankingDesc": "Tap a row for full game details, provider info, and one-tap H5 play.",
+        "sections": {
+          "bodyTitle": "How this ranking works",
+          "body": "We pull the RM_TEMP (popular) class from the game API — the same source behind the homepage carousel. Order follows the feed; we do not accept paid placement on this page.",
+          "pickTitle": "Who this is for",
+          "pick": "Mobile players in Pakistan who want a quick answer before depositing with JazzCash or EasyPaisa. If you already know the game you want, use search instead.",
+          "tipTitle": "Responsible play",
+          "tip": "18+ only. Set a deposit limit before you play. These are real-money games — treat wins as luck, not income."
+        }
+      },
+      "bestSlots": {
+        "title": "Best online slots for Pakistan players",
+        "teaser": "PG, JILI, CQ9, and WD slots ranked from the live slots (DZ) catalog.",
+        "metaTitle": "Best Online Slots Pakistan",
+        "metaDesc": "Best slot games for Pakistan — PG Soft, JILI, CQ9, Pragmatic-style titles ranked from live catalog data with instant browser play.",
+        "intro": "Slots are the busiest category on pakistanbettinggames.casino. This page ranks what the DZ (slots) feed returns today — useful if you care about spin games more than sports or live tables.",
+        "rankingTitle": "Top slot picks",
+        "rankingDesc": "Each entry links to a dedicated game page with provider badge and play button.",
+        "sections": {
+          "bodyTitle": "What makes a slot “best” here",
+          "body": "We prioritize titles that appear in the active slots feed with stable icons and H5 launch paths. Volatility and RTP vary by provider; read the game page and in-app help for rules.",
+          "pickTitle": "Providers you will see",
+          "pick": "Expect PG Soft-style games (Fortune Ox, Fortune Rabbit), JILI and CQ9 entries, and WD exclusives. Wallet is shared — you do not need separate accounts per provider.",
+          "tipTitle": "Quick tip",
+          "tip": "Start with smaller bets until you understand bonus features. Use the site search if you are hunting one exact title."
+        }
+      },
+      "liveCasino": {
+        "title": "Best live casino tables to open first",
+        "teaser": "Live dealer baccarat, roulette, and blackjack from the SX category feed.",
+        "metaTitle": "Best Live Casino Games Pakistan",
+        "metaDesc": "Top live dealer casino games — baccarat, roulette, blackjack ranked from live catalog for Pakistan players.",
+        "intro": "Live casino (SX) streams real dealers in HD. This ranking lists what the API returns for that class — a starting point before you join a table in the H5 lobby.",
+        "rankingTitle": "Live tables in the feed",
+        "rankingDesc": "Open any row to see platform and category before you play.",
+        "sections": {
+          "bodyTitle": "Live vs RNG tables",
+          "body": "Live games use human dealers and real cards or wheels. They run slower than slots but suit players who want visible outcomes. Data connection matters — Wi‑Fi or strong 4G is recommended.",
+          "pickTitle": "Bankroll advice",
+          "pick": "Live tables often have higher minimums than slots. Deposit only what you can afford to lose in one session.",
+          "tipTitle": "Etiquette",
+          "tip": "Follow in-table chat rules. Do not share account details in chat."
+        }
+      },
+      "sports": {
+        "title": "Cricket & sports betting — what’s in the catalog",
+        "teaser": "Sports (TY) titles and markets as listed in the live feed — cricket, football, in-play.",
+        "metaTitle": "Cricket Sports Betting Pakistan Guide",
+        "metaDesc": "Cricket and sports betting games for Pakistan — PSL, IPL, in-play markets from live platform catalog.",
+        "intro": "Sports betting peaks during PSL and major cricket tours. This page surfaces TY-class games from the feed so you can jump to the sports lobby with context.",
+        "rankingTitle": "Sports entries in the feed",
+        "rankingDesc": "Names reflect API labels; in-app markets (match odds, props) appear after you tap Play.",
+        "sections": {
+          "bodyTitle": "Cricket-focused play",
+          "body": "Pakistan players often search during PSL, bilateral series, and IPL windows. Odds move quickly on live balls — confirm your slip before confirming a bet in the wallet.",
+          "pickTitle": "Football & World Cup",
+          "pick": "The same sports wallet covers football, tennis, and FIFA World Cup 2026 when markets are open.",
+          "tipTitle": "Cash-out",
+          "tip": "If cash-out is offered on a market, rules are shown in the bet slip. Read them before you rely on early settlement."
+        }
+      },
+      "fifa2026": {
+        "title": "FIFA World Cup 2026 betting — football markets & live play",
+        "teaser": "World Cup 2026 (June–July). Match odds, outrights, and in-play football from the sports lobby.",
+        "metaTitle": "FIFA World Cup 2026 Betting Pakistan",
+        "metaDesc": "FIFA World Cup 2026 betting — football match odds, group winners, finals markets, live in-play on mobile H5.",
+        "intro": "FIFA World Cup 2026 is hosted across the USA, Mexico, and Canada from June 2026. This page lists sportsbook entries from our live feed and links to the H5 wallet for football markets.",
+        "rankingTitle": "Sportsbook picks for football season",
+        "rankingDesc": "Tap Play to open the sports lobby for World Cup and club football lines.",
+        "sections": {
+          "bodyTitle": "What to expect for World Cup 2026",
+          "body": "Expect match winner, goals markets, both teams to score, group qualification, and tournament outrights as the schedule is confirmed.",
+          "pickTitle": "One wallet",
+          "pick": "The same mobile wallet funds World Cup bets alongside cricket and slots. Deposit with JazzCash or EasyPaisa, then open Sports.",
+          "tipTitle": "Bet responsibly",
+          "tip": "18+ only. Set a budget before knockout rounds and never chase live in-play losses."
+        }
+      },
+      "h5Guide": {
+        "title": "How to play online casino without an APK",
+        "teaser": "Use H5 in Chrome or Safari — add to home screen, deposit, pick a game from our catalog.",
+        "metaTitle": "Play Casino Without APK — H5 Guide",
+        "metaDesc": "Play online casino in Pakistan without APK download — H5 browser guide with JazzCash, EasyPaisa, and game links.",
+        "intro": "You do not need a sideloaded APK for most titles on this site. The H5 client runs in your mobile browser and shares one wallet across slots, sports, and live casino.",
+        "rankingTitle": "",
+        "rankingDesc": "",
+        "sections": {
+          "bodyTitle": "Step-by-step",
+          "body": "1) Tap Play on any game or category. 2) Register with your mobile number. 3) Open Wallet → Deposit and choose JazzCash, EasyPaisa, or USDT. 4) Return to the lobby and open your game. 5) Optional: use the browser menu “Add to Home Screen” for an app-like icon.",
+          "pickTitle": "Why H5 instead of random APKs",
+          "pick": "Unofficial APK files can be outdated or modified. The linked H5 domain is the operator’s current client — same account you fund from this catalog.",
+          "tipTitle": "If the page won’t load",
+          "tip": "Try another network, disable aggressive ad blockers on the casino domain, or use the official app download link from the header if H5 is blocked on your ISP."
+        }
+      },
+      "deposits": {
+        "title": "JazzCash & EasyPaisa deposits explained",
+        "teaser": "How Pakistani players fund the wallet — methods, timing, and what to check before you play.",
+        "metaTitle": "JazzCash EasyPaisa Casino Deposit Guide",
+        "metaDesc": "Deposit to online casino with JazzCash or EasyPaisa in Pakistan — steps, timing, and troubleshooting.",
+        "intro": "Most Pakistan players fund through mobile wallets. Deposits happen inside the licensed H5 cashier after you sign in — this site lists games but does not hold your balance.",
+        "rankingTitle": "",
+        "rankingDesc": "",
+        "sections": {
+          "bodyTitle": "Standard deposit flow",
+          "body": "Log in → Wallet → Deposit → select JazzCash or EasyPaisa → enter amount within shown limits → approve in the wallet app → balance updates when the operator confirms (usually minutes).",
+          "pickTitle": "USDT and bank transfer",
+          "pick": "Some accounts also show USDT or bank transfer. Availability depends on KYC level and promotions.",
+          "tipTitle": "Withdrawals",
+          "tip": "Withdraw to the same method where possible. First withdrawal may need identity verification — complete it once to avoid delays later."
+        }
+      }
+    }
+  }
+}

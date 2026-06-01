@@ -1,0 +1,65 @@
+# Pakistan Betting Games
+
+> pakistanbettinggames.casino — online betting games catalog for Pakistan and international players. Live casino, slots, sports betting, fishing, and card games with JazzCash, EasyPaisa, and H5 browser play.
+
+## About this site
+
+Pakistan Betting Games is an entertainment brand catalog. Each game has a dedicated page with description, provider, category, and a Play link to the licensed H5 casino. The operator holds MGA licensing and international compliance certifications (see About page).
+
+Languages: English (Pakistan), Hindi, Urdu, Chinese.
+Locales: /en-PK/, /hi-IN/, /ur-PK/, /zh-CN/
+
+Wallet currencies (independent of language): PKR, USD, INR, VND, IDR.
+URL pattern: /{locale}/{currency}/… — e.g. /en-PK/pkr/games, /ur-PK/usd/guides/best-slots-pakistan. Currency hub list: /en-PK/pkr/currency.
+
+## Primary pages
+
+- Home: https://pakistanbettinggames.casino/en-PK/pkr/
+- All games (catalog): https://pakistanbettinggames.casino/en-PK/pkr/games
+- Game search: https://pakistanbettinggames.casino/en-PK/pkr/games?q={query}
+- Player guides: https://pakistanbettinggames.casino/en-PK/pkr/guides
+- Categories: /en-PK/pkr/category/popular, /slots, /sports, /fishing, /cards, /live-casino
+- FAQ: https://pakistanbettinggames.casino/en-PK/pkr/faq
+- About: https://pakistanbettinggames.casino/en-PK/pkr/about
+- Other wallets: /en-PK/usd/, /en-PK/inr/, etc.
+
+## Guides (editorial, data-backed)
+
+- Top games Pakistan: /en-PK/guides/top-games-pakistan
+- Best slots: /en-PK/guides/best-slots-pakistan
+- Live casino picks: /en-PK/guides/live-casino-picks
+- Cricket & sports: /en-PK/pkr/guides/cricket-sports-betting
+- FIFA World Cup 2026 betting: /en-PK/pkr/guides/fifa-world-cup-2026-betting
+- Play without APK (H5): /en-PK/guides/play-without-apk
+- JazzCash & EasyPaisa deposits: /en-PK/guides/jazzcash-easypaisa-deposits
+
+Guide rankings use the same live game API as the catalog; order can change when the feed updates.
+
+## Game pages
+
+Pattern: https://pakistanbettinggames.casino/en-PK/{currency}/games/{game-name}-{id}
+
+Each page includes VideoGame and SoftwareApplication structured data, breadcrumbs, provider icon, and play/download actions.
+
+## Search
+
+Site search uses game name lookup (minimum 2 characters). API-backed results link to individual game pages.
+
+## Payments & region
+
+Primary audience: Pakistan. Common deposit methods: JazzCash, EasyPaisa, USDT. Supported wallets: PKR, USD, INR, VND, IDR — any locale can use any wallet; use header selector or currency pages.
+
+## Responsible gaming
+
+18+ only. Play responsibly. Do not bet more than you can afford to lose.
+
+## Sitemaps
+
+- https://pakistanbettinggames.casino/sitemap/en-PK.xml
+- https://pakistanbettinggames.casino/sitemap/hi-IN.xml
+- https://pakistanbettinggames.casino/sitemap/ur-PK.xml
+- https://pakistanbettinggames.casino/sitemap/zh-CN.xml
+
+## Contact / play
+
+Real-money play occurs on the linked H5 casino after tapping Play on any game or category page. This catalog does not process payments directly.

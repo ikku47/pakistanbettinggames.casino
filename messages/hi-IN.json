@@ -1,0 +1,417 @@
+{
+  "Meta": {
+    "siteName": "पाकिस्तान बेटिंग गेम्स",
+    "shortName": "PBG",
+    "tagline": "बेटिंग गेम्स",
+    "description": "पाकिस्तान में सर्वश्रेष्ठ ऑनलाइन बेटिंग गेम्स — स्लॉट, लाइव कैसीनो, स्पोर्ट्स बेटिंग, फिशिंग और तीन पत्ती। तेज़ JazzCash और EasyPaisa जमा।",
+    "titleSuffix": "ऑनलाइन कैसीनो और बेटिंग",
+    "keywords": "पाकिस्तान बेटिंग गेम्स, ऑनलाइन कैसीनो, क्रिकेट बेटिंग, स्लॉट गेम्स, teen patti, jazzcash casino"
+  },
+  "Nav": {
+    "allGames": "गेम्स",
+    "help": "मदद",
+    "enterCasino": "अभी खेलें",
+    "downloadApp": "ऐप डाउनलोड",
+    "open": "और देखें",
+    "searchPlaceholder": "गेम खोजें...",
+    "guides": "Guides"
+  },
+  "Ticker": {
+    "items": "JazzCash जमा लाइव|PSL सीज़न|Fortune Ox ट्रेंडिंग|तीन पत्ती खुला|Aviator 24/7|EasyPaisa निकासी|PG और JILI स्लॉट|क्रिकेट लाइव ऑड्स"
+  },
+  "Header": {
+    "edition": "पाकिस्तान · असली पैसा · H5",
+    "cities": "कराची / लाहौर / इस्लामाबाद"
+  },
+  "Home": {
+    "heroBadge": "संपादक की पसंद · रोज़ अपडेट",
+    "heroSubtitle": "पाकिस्तान के लिए ऑनलाइन कैसीनो और बेटिंग गेम्स",
+    "heroCta": "कैसीनो खोलें",
+    "heroBrowse": "सूची देखें",
+    "factsTitle": "जल्दी जानकारी",
+    "factDeposits": "जमा",
+    "factDepositsVal": "JazzCash · EasyPaisa",
+    "factGames": "गेम्स",
+    "factGamesVal": "स्लॉट · स्पोर्ट्स · लाइव",
+    "factAccess": "एक्सेस",
+    "factAccessVal": "ब्राउज़र — बिना APK",
+    "factPayouts": "निकासी",
+    "factPayoutsVal": "मिनटों में",
+    "ageNotice": "18+ · जिम्मेदारी से खेलें",
+    "featuredTitle": "आपके फोन पर लोकप्रिय",
+    "featuredMore": "+ और",
+    "hotListTitle": "नए गेम्स",
+    "hotListSubtitle": "अभी खोले जा रहे गेम — लाइव फ़ीड से।",
+    "hotListLink": "पूरी सूची",
+    "sectionsTitle": "श्रेणियाँ",
+    "sectionsSubtitle": "एक सेक्शन चुनें",
+    "ctaEyebrow": "एक टैप दूर",
+    "ctaTitle": "आपकी सीट तैयार है",
+    "ctaBody": "मोबाइल कैसीनो। एक बार रजिस्टर करें, {currency} में जमा करें, सब खेलें।",
+    "ctaButton": "कैसीनो लॉन्च करें",
+    "seoTitle": "पाकिस्तान में सर्वश्रेष्ठ ऑनलाइन बेटिंग गेम्स (2026)",
+    "seoP1": "स्लॉट, क्रैश गेम्स, तीन पत्ती, फिशिंग और क्रिकेट — {currency} में H5 प्लेटफ़ॉर्म पर।",
+    "seoP2": "लाइव API से अपडेट — APK इंडेक्स जैसा ताज़ा कैटलॉग।",
+    "seoWhy": "यह इंडेक्स क्यों",
+    "seoLi1": "JazzCash और EasyPaisa जमा",
+    "seoLi2": "हर गेम का अलग SEO पेज",
+    "seoLi3": "ब्राउज़र में खेलें — APK नहीं",
+    "seoLi4": "क्रिकेट, aviator, PG, JILI — असली खोज"
+  },
+  "Categories": {
+    "popular": {
+      "name": "लोकप्रिय",
+      "description": "सबसे ज़्यादा खेले जाने वाले गेम — ट्रेंडिंग स्लॉट और क्रैश।",
+      "seoTitle": "लोकप्रिय बेटिंग गेम्स"
+    },
+    "slots": {
+      "name": "स्लॉट",
+      "description": "PG Soft, JILI, CQ9 और WD स्लॉट।",
+      "seoTitle": "ऑनलाइन स्लॉट गेम्स"
+    },
+    "sports": {
+      "name": "स्पोर्ट्स",
+      "description": "क्रिकेट, फुटबॉल — PSL, IPL लाइव ऑड्स।",
+      "seoTitle": "स्पोर्ट्स बेटिंग | क्रिकेट"
+    },
+    "fishing": {
+      "name": "फिशिंग",
+      "description": "फिश शूटिंग आर्केड — JILI, CQ9, JDB।",
+      "seoTitle": "फिशिंग गेम्स"
+    },
+    "cards": {
+      "name": "कार्ड",
+      "description": "तीन पत्ती, रम्मी, पोकर और टेबल गेम्स।",
+      "seoTitle": "तीन पत्ती और कार्ड गेम्स"
+    },
+    "liveCasino": {
+      "name": "लाइव कैसीनो",
+      "description": "लाइव डीलर बैकारेट, रूलेट, ब्लैकजैक।",
+      "seoTitle": "लाइव कैसीनो"
+    }
+  },
+  "Search": {
+    "placeholder": "गेम खोजें...",
+    "noResults": "कोई गेम नहीं मिला।",
+    "viewAll": "\"{query}\" के सभी परिणाम"
+  },
+  "Games": {
+    "catalogTitle": "गेम कैटलॉग",
+    "searchTitle": "खोज: {query}",
+    "searchDesc": "\"{query}\" से मेल खाते {count} गेम।",
+    "searchEmpty": "\"{query}\" के लिए कोई गेम नहीं।",
+    "searchMetaTitle": "खोज {query}",
+    "searchMetaDesc": "{query} से मेल खाते ऑनलाइन बेटिंग गेम खोजें।",
+    "catalogEyebrow": "पूरी सूची",
+    "catalogDesc": "फ़ीड के सभी स्लॉट — पेज चुनें, पढ़ें, खेलें।",
+    "pageOf": "पृष्ठ {current} / {pages}",
+    "titlesIn": "{category} में {total} गेम",
+    "allTitle": "सभी ऑनलाइन बेटिंग गेम्स",
+    "allDesc": "पूरी कैटलॉग। विवरण या Play दबाएँ।",
+    "breadcrumbCatalog": "कैटलॉग",
+    "empty": "अभी खाली — अगले अपडेट का इंतज़ार करें।",
+    "categoryEmpty": "{category} लोड नहीं — कैसीनो में पूरी सूची।",
+    "playCategory": "{category} खेलें",
+    "sectionLabel": "सेक्शन · {code}",
+    "info": "जानकारी",
+    "play": "खेलें",
+    "details": "और पढ़ें",
+    "trending": "ट्रेंडिंग",
+    "featuredBlurb": "मोबाइल पर खेलें — {currency} वॉलेट।",
+    "altSuffix": "ऑनलाइन बेटिंग गेम"
+  },
+  "GameDetail": {
+    "playNow": "{title} खेलें",
+    "intro": "{title} खोजने वालों के लिए — {currency} कैसीनो, बिना APK।",
+    "code": "कोड",
+    "category": "श्रेणी",
+    "platform": "प्लेटफ़ॉर्म",
+    "type": "प्रकार",
+    "realMoney": "असली पैसा",
+    "casino": "कैसीनो",
+    "howToPlay": "कैसे खेलें",
+    "step1": "Play दबाएँ — ब्राउज़र में कैसीनो।",
+    "step2": "मोबाइल नंबर से साइन अप।",
+    "step3": "JazzCash, EasyPaisa या USDT जमा।",
+    "step4": "{category} में {title} खोजें।",
+    "metaTitle": "{title} — ऑनलाइन खेलें",
+    "metaDesc": "{title} ({category}) ऑनलाइन। JazzCash और EasyPaisa। तुरंत H5।",
+    "highlightsTitle": "इस गेम के बारे में",
+    "highlight1": "ब्राउज़र में तुरंत खेलें — APK नहीं",
+    "highlight2": "JazzCash और EasyPaisa के साथ सुरक्षित {currency} वॉलेट",
+    "highlight3": "मोबाइल के लिए अनुकूलित — होम स्क्रीन पर जोड़ें",
+    "relatedTitle": "आपको यह भी पसंद आ सकता है",
+    "onlineNow": "अभी ऑनलाइन",
+    "editorsPick": "हॉट",
+    "viewCategory": "सभी {category} देखें",
+    "gameInfo": "गेम जानकारी"
+  },
+  "Faq": {
+    "title": "अक्सर पूछे जाने वाले प्रश्न",
+    "subtitle": "जमा, निकासी, गेम्स और सुरक्षित खेलने के बारे में।",
+    "metaTitle": "FAQ",
+    "metaDesc": "Pakistan Betting Games — JazzCash, EasyPaisa, H5, स्लॉट, स्पोर्ट्स और जिम्मेदार गेमिंग।",
+    "items": {
+      "q1": "Pakistan Betting Games क्या है?",
+      "a1": "pakistanbettinggames.casino स्लॉट, स्पोर्ट्स बेटिंग, लाइव कैसीनो, फिशिंग और कार्ड गेम्स की कैटलॉग है। Play से H5 कैसीनो खुलता है।",
+      "q2": "JazzCash या EasyPaisa से जमा कैसे करें?",
+      "a2": "कैसीनो खोलें, Wallet → Deposit। JazzCash, EasyPaisa, बैंक या USDT चुनें। अक्सर तुरंत क्रेडिट।",
+      "q3": "क्या APK डाउनलोड करना होगा?",
+      "a3": "ज़्यादातर गेम्स ब्राउज़र में चलते हैं। होम स्क्रीन पर जोड़ सकते हैं।",
+      "q4": "पाकिस्तान में कौन से गेम लोकप्रिय हैं?",
+      "a4": "Aviator, Fortune Ox, तीन पत्ती, क्रिकेट/PSL, JILI फिशिंग, लाइव बैकारेट।",
+      "q5": "क्या ऑनलाइन बेटिंग कानूनी है?",
+      "a5": "क्षेत्र और उम्र पर निर्भर। केवल 18+। स्थानीय कानून जाँचें।",
+      "q6": "निकासी कितनी तेज़ है?",
+      "a6": "KYC के बाद JazzCash/EasyPaisa अक्सर मिनटों से कुछ घंटों में।",
+      "q7": "किसी गेम को कैसे खोजें?",
+      "a7": "ऊपर सर्च बार में कम से कम दो अक्षर टाइप करें, जैसे Fortune या Aviator।",
+      "q8": "कौन से भुगतान तरीके हैं?",
+      "a8": "JazzCash, EasyPaisa, USDT और बैंक ट्रांसफर (जहाँ उपलब्ध)।",
+      "q9": "क्या गेम्स निष्पक्ष और लाइसेंस प्राप्त हैं?",
+      "a9": "PG, JILI, CQ9, Pragmatic आदि प्रोवाइडर। About पर GLI, MGA, PAGCOR, UKGC जानकारी।",
+      "q10": "iPhone और Android पर खेल सकते हैं?",
+      "a10": "हाँ, मॉडर्न मोबाइल ब्राउज़र से। ऐप डाउनलोड विकल्प भी उपलब्ध।",
+      "q11": "न्यूनतम जमा कितना है?",
+      "a11": "विधि और प्रमोशन पर निर्भर। लॉगिन के बाद कैशियर में सीमा दिखती है।",
+      "q12": "खाते में मदद कैसे लें?",
+      "a12": "लॉगिन के बाद इन-ऐप सपोर्ट या किसी Play बटन से कैसीनो खोलें।"
+    }
+  },
+  "About": {
+    "title": "Pakistan Betting Games के बारे में",
+    "metaTitle": "परिचय",
+    "metaDesc": "Pakistan Betting Games (pakistanbettinggames.casino) — लाइव कैसीनो, स्लॉट, स्पोर्ट्स बेटिंग, फिशिंग और कार्ड गेम्स, MGA लाइसेंस के साथ।",
+    "p1": "Pakistan Betting Games (pakistanbettinggames.casino) एक विश्व स्तरीय ऑनलाइन मनोरंजन ब्रांड है जो लाइव कैसीनो, कार्ड गेम्स, स्लॉट, फिशिंग और स्पोर्ट्स बेटिंग को एकीकृत करता है, और दुनिया भर के खिलाड़ियों को सुरक्षित, निष्पक्ष और विविध गेमिंग अनुभव प्रदान करता है।",
+    "p2": "कंपनी के पास Malta Gaming Authority (MGA) द्वारा जारी अंतर्राष्ट्रीय गेमिंग लाइसेंस है और यह British Virgin Islands (BVI) में पंजीकृत है। मान्यता प्राप्त प्राधिकरणों से कई अनुपालन प्रमाणनों के साथ, pakistanbettinggames.casino वैश्विक गेमिंग और बेटिंग व्यवसाय को कानूनी रूप से संचालित करने के लिए पूर्ण रूप से योग्य है।",
+    "p3": "केवल 18+। जिम्मेदारी से खेलें। जो खो सकते हैं वही दांव लगाएँ।"
+  },
+  "Partners": {
+    "title": "हमारे गेम पार्टनर",
+    "subtitle": "लाइसेंस प्रोवाइडर — PG, JILI, CQ9, Pragmatic और अधिक, एक वॉलेट पर।",
+    "footerSubtitle": "विश्वसनीय प्लेटफ़ॉर्म पार्टनर"
+  },
+  "Licenses": {
+    "sectionTitle": "प्रमाणन और नियामक निगरानी",
+    "sectionIntro": "इस प्लेटफ़ॉर्म पर गेम और सिस्टम अंतरराष्ट्रीय परीक्षण, लाइसेंसिंग और निगरानी ढांचों के अनुरूप हैं। ये चिह्न निष्पक्षता, सुरक्षा और जवाबदेही की स्वतंत्र समीक्षा दर्शाते हैं।",
+    "footnote": "प्रमाणन और लाइसेंस बैज पारदर्शिता के लिए दिखाए जाते हैं। क्षेत्र के अनुसार गेम या भुगतान उपलब्धता भिन्न हो सकती है। खेलने से पहले स्थानीय कानून जाँचें।",
+    "items": {
+      "gli": {
+        "title": "GLI पूर्ण रैंडम एल्गोरिदम",
+        "description": "Gaming Laboratories International (GLI) RNG और गेम लॉजिक का प्रमाणन करता है ताकि परिणाम निष्पक्ष हों और ऑपरेटर द्वारा हेरफेर न हो सके।"
+      },
+      "mga": {
+        "title": "Malta Gaming Authority (MGA) प्रमाणन",
+        "description": "MGA एक EU-स्तरीय नियामक है जो रिमोट गेमिंग ऑपरेटरों को लाइसेंस देता है, AML नियंत्रण, खिलाड़ी धन अलगाव और विवाद समाधान लागू करता है।"
+      },
+      "pagcor": {
+        "title": "PAGCOR गेमिंग लाइसेंस",
+        "description": "Philippine Amusement and Gaming Corporation (PAGCOR) फिलीपींस में लाइसेंस प्राप्त गेमिंग को अधिकृत और निरीक्षण करता है, जिसमें अनुपालन ऑडिट और जिम्मेदार गेमिंग शामिल है।"
+      },
+      "ukgc": {
+        "title": "UK Gambling Commission (UKGC) निगरानी",
+        "description": "UKGC ग्रेट ब्रिटेन में वाणिज्यिक जुआ को नियंत्रित करता है — नाबालिगों की सुरक्षा, स्व-बहिष्करण और सख्त विज्ञापन मानक आवश्यक हैं।"
+      }
+    }
+  },
+  "Footer": {
+    "theEnd": "समाप्त",
+    "blurb": "गेम सूची। 18+। जिम्मेदार गेमिंग।",
+    "playCol": "खेलें",
+    "infoCol": "जानकारी",
+    "hotList": "हॉट लिस्ट",
+    "sportsbook": "स्पोर्ट्सबुक",
+    "licenses": "प्रमाणन",
+    "llms": "LLMs.txt",
+    "copyright": "© {year} {siteName}",
+    "disclaimer": "Google Play / App Store से संबद्ध नहीं",
+    "guidesLink": "Guides & rankings",
+    "currencies": "वॉलेट मुद्राएँ"
+  },
+  "Currency": {
+    "selectLabel": "वॉलेट मुद्रा",
+    "indexEyebrow": "भाषा से अलग",
+    "indexTitle": "कैसीनो वॉलेट मुद्राएँ",
+    "indexSubtitle": "किसी भी भाषा पर PKR, USD, INR, VND, IDR — मुद्रा भाषा पर निर्भर नहीं।",
+    "indexMetaDescription": "PKR, USD, INR, VND या IDR में जमा करें और खेलें। भाषा बदलें, वॉलेट वही रहे।",
+    "indexKeywords": "pkr casino, usd betting, inr casino, multi currency betting",
+    "indexListName": "समर्थित मुद्राएँ",
+    "viewHub": "मुद्रा गाइड",
+    "hubEyebrow": "{currency} वॉलेट",
+    "hubTitle": "{currency} ऑनलाइन कैसीनो और बेटिंग",
+    "hubLead": "{symbol} ({currency}) वॉलेट — सभी भाषाओं में एक ही गेम सूची।",
+    "hubMetaDescription": "{currency} ({symbol}) वॉलेट पर स्लॉट, क्रैश, तीन पत्ती और क्रिकेट। भाषा अलग, मुद्रा आपकी पसंद।",
+    "hubP1": "“{currency} casino” खोजने वालों के लिए — भाषा से स्वतंत्र।",
+    "hubP2": "कैसीनो में {currency} चुनें; सूची हर भाषा में वैध।",
+    "hubLi1": "जमा और बैलेंस {currency} में",
+    "hubLi2": "चारों भाषाएँ, एक वॉलेट",
+    "hubLi3": "प्रति मुद्रा अलग SEO URL",
+    "hubCta": "{currency} में खेलें",
+    "hubBrowse": "गेम देखें",
+    "localeNote": "भाषा और मुद्रा अलग हैं — हेडर से मुद्रा बदलें।",
+    "otherWallets": "अन्य वॉलेट",
+    "codes": {
+      "PKR": { "blurb": "पाकिस्तानी रुपया", "keywords": "pkr casino, pkr betting" },
+      "USD": { "blurb": "अमेरिकी डॉलर", "keywords": "usd casino, dollar wallet" },
+      "INR": { "blurb": "भारतीय रुपया", "keywords": "inr casino, inr betting" },
+      "VND": { "blurb": "वियतनामी डोंग", "keywords": "vnd casino" },
+      "IDR": { "blurb": "इंडोनेशियाई रुपिया", "keywords": "idr casino" }
+    }
+  },
+  "Common": {
+    "home": "होम",
+    "faq": "FAQ",
+    "about": "परिचय",
+    "notFound": "नहीं मिला",
+    "prev": "पिछला",
+    "next": "अगला",
+    "breadcrumb": "ब्रेडक्रंब"
+  },
+  "LanguageSwitcher": {
+    "label": "भाषा"
+  },
+  "Theme": {
+    "light": "लाइट मोड",
+    "dark": "डार्क मोड",
+    "switchToLight": "लाइट मोड पर जाएँ",
+    "switchToDark": "डार्क मोड पर जाएँ"
+  },
+  "Guides": {
+    "indexTitle": "Player guides & rankings",
+    "indexMetaTitle": "Guides & game rankings",
+    "indexMetaDesc": "Data-backed rankings and how-to guides for online betting in Pakistan — slots, live casino, cricket, JazzCash deposits, and H5 play.",
+    "indexIntro": "Short, practical articles built from our live game catalog. Rankings refresh from the same feed as the homepage — not generic listicles.",
+    "homeTeaser": "Rankings and how-tos backed by live game data.",
+    "viewAll": "All guides",
+    "readGuide": "Read guide",
+    "guideLabel": "Guide",
+    "updatedNote": "Rankings reflect the current platform feed and may change as new titles go live.",
+    "rank": "Rank",
+    "rankingCount": "{count} games ranked",
+    "viewDetails": "Details",
+    "tryThese": "Popular games to try next",
+    "ctaText": "Ready to play? Open the casino in your browser — no APK required.",
+    "ctaButton": "Launch casino",
+    "items": {
+      "topGames": {
+        "title": "Top betting games in Pakistan (live ranking)",
+        "teaser": "The titles players open most right now — crash, slots, and instant games from our feed.",
+        "metaTitle": "Top Betting Games Pakistan 2026",
+        "metaDesc": "Live ranking of the most played online betting games in Pakistan — Fortune Ox, Aviator-style crash, teen patti, and more with Play links.",
+        "intro": "This list is built from the platform’s popular-game feed, not a static blog template. When a title spikes during PSL season or a new PG slot launches, it can move up here.",
+        "rankingTitle": "Top 12 right now",
+        "rankingDesc": "Tap a row for full game details, provider info, and one-tap H5 play.",
+        "sections": {
+          "bodyTitle": "How this ranking works",
+          "body": "We pull the RM_TEMP (popular) class from the game API — the same source behind the homepage carousel. Order follows the feed; we do not accept paid placement on this page.",
+          "pickTitle": "Who this is for",
+          "pick": "Mobile players in Pakistan who want a quick answer before depositing with JazzCash or EasyPaisa. If you already know the game you want, use search instead.",
+          "tipTitle": "Responsible play",
+          "tip": "18+ only. Set a deposit limit before you play. These are real-money games — treat wins as luck, not income."
+        }
+      },
+      "bestSlots": {
+        "title": "Best online slots for Pakistan players",
+        "teaser": "PG, JILI, CQ9, and WD slots ranked from the live slots (DZ) catalog.",
+        "metaTitle": "Best Online Slots Pakistan",
+        "metaDesc": "Best slot games for Pakistan — PG Soft, JILI, CQ9, Pragmatic-style titles ranked from live catalog data with instant browser play.",
+        "intro": "Slots are the busiest category on pakistanbettinggames.casino. This page ranks what the DZ (slots) feed returns today — useful if you care about spin games more than sports or live tables.",
+        "rankingTitle": "Top slot picks",
+        "rankingDesc": "Each entry links to a dedicated game page with provider badge and play button.",
+        "sections": {
+          "bodyTitle": "What makes a slot “best” here",
+          "body": "We prioritize titles that appear in the active slots feed with stable icons and H5 launch paths. Volatility and RTP vary by provider; read the game page and in-app help for rules.",
+          "pickTitle": "Providers you will see",
+          "pick": "Expect PG Soft-style games (Fortune Ox, Fortune Rabbit), JILI and CQ9 entries, and WD exclusives. Wallet is shared — you do not need separate accounts per provider.",
+          "tipTitle": "Quick tip",
+          "tip": "Start with smaller bets until you understand bonus features. Use the site search if you are hunting one exact title."
+        }
+      },
+      "liveCasino": {
+        "title": "Best live casino tables to open first",
+        "teaser": "Live dealer baccarat, roulette, and blackjack from the SX category feed.",
+        "metaTitle": "Best Live Casino Games Pakistan",
+        "metaDesc": "Top live dealer casino games — baccarat, roulette, blackjack ranked from live catalog for Pakistan players.",
+        "intro": "Live casino (SX) streams real dealers in HD. This ranking lists what the API returns for that class — a starting point before you join a table in the H5 lobby.",
+        "rankingTitle": "Live tables in the feed",
+        "rankingDesc": "Open any row to see platform and category before you play.",
+        "sections": {
+          "bodyTitle": "Live vs RNG tables",
+          "body": "Live games use human dealers and real cards or wheels. They run slower than slots but suit players who want visible outcomes. Data connection matters — Wi‑Fi or strong 4G is recommended.",
+          "pickTitle": "Bankroll advice",
+          "pick": "Live tables often have higher minimums than slots. Deposit only what you can afford to lose in one session.",
+          "tipTitle": "Etiquette",
+          "tip": "Follow in-table chat rules. Do not share account details in chat."
+        }
+      },
+      "sports": {
+        "title": "Cricket & sports betting — what’s in the catalog",
+        "teaser": "Sports (TY) titles and markets as listed in the live feed — cricket, football, in-play.",
+        "metaTitle": "Cricket Sports Betting Pakistan Guide",
+        "metaDesc": "Cricket and sports betting games for Pakistan — PSL, IPL, in-play markets from live platform catalog.",
+        "intro": "Sports betting peaks during PSL and major cricket tours. This page surfaces TY-class games from the feed so you can jump to the sports lobby with context.",
+        "rankingTitle": "Sports entries in the feed",
+        "rankingDesc": "Names reflect API labels; in-app markets (match odds, props) appear after you tap Play.",
+        "sections": {
+          "bodyTitle": "Cricket-focused play",
+          "body": "Pakistan players often search during PSL, bilateral series, and IPL windows. Odds move quickly on live balls — confirm your slip before confirming a bet in the wallet.",
+          "pickTitle": "Football & World Cup",
+          "pick": "The same sports wallet covers football, tennis, and FIFA World Cup 2026 when markets are open.",
+          "tipTitle": "Cash-out",
+          "tip": "If cash-out is offered on a market, rules are shown in the bet slip. Read them before you rely on early settlement."
+        }
+      },
+      "fifa2026": {
+        "title": "FIFA World Cup 2026 betting — football markets & live play",
+        "teaser": "World Cup 2026 (June–July). Match odds, outrights, and in-play football from the sports lobby.",
+        "metaTitle": "FIFA World Cup 2026 Betting Pakistan",
+        "metaDesc": "FIFA World Cup 2026 betting — football match odds, group winners, finals markets, live in-play on mobile H5.",
+        "intro": "FIFA World Cup 2026 is hosted across the USA, Mexico, and Canada from June 2026. This page lists sportsbook entries from our live feed and links to the H5 wallet for football markets.",
+        "rankingTitle": "Sportsbook picks for football season",
+        "rankingDesc": "Tap Play to open the sports lobby for World Cup and club football lines.",
+        "sections": {
+          "bodyTitle": "What to expect for World Cup 2026",
+          "body": "Expect match winner, goals markets, both teams to score, group qualification, and tournament outrights as the schedule is confirmed.",
+          "pickTitle": "One wallet",
+          "pick": "The same mobile wallet funds World Cup bets alongside cricket and slots. Deposit with JazzCash or EasyPaisa, then open Sports.",
+          "tipTitle": "Bet responsibly",
+          "tip": "18+ only. Set a budget before knockout rounds and never chase live in-play losses."
+        }
+      },
+      "h5Guide": {
+        "title": "How to play online casino without an APK",
+        "teaser": "Use H5 in Chrome or Safari — add to home screen, deposit, pick a game from our catalog.",
+        "metaTitle": "Play Casino Without APK — H5 Guide",
+        "metaDesc": "Play online casino in Pakistan without APK download — H5 browser guide with JazzCash, EasyPaisa, and game links.",
+        "intro": "You do not need a sideloaded APK for most titles on this site. The H5 client runs in your mobile browser and shares one wallet across slots, sports, and live casino.",
+        "rankingTitle": "",
+        "rankingDesc": "",
+        "sections": {
+          "bodyTitle": "Step-by-step",
+          "body": "1) Tap Play on any game or category. 2) Register with your mobile number. 3) Open Wallet → Deposit and choose JazzCash, EasyPaisa, or USDT. 4) Return to the lobby and open your game. 5) Optional: use the browser menu “Add to Home Screen” for an app-like icon.",
+          "pickTitle": "Why H5 instead of random APKs",
+          "pick": "Unofficial APK files can be outdated or modified. The linked H5 domain is the operator’s current client — same account you fund from this catalog.",
+          "tipTitle": "If the page won’t load",
+          "tip": "Try another network, disable aggressive ad blockers on the casino domain, or use the official app download link from the header if H5 is blocked on your ISP."
+        }
+      },
+      "deposits": {
+        "title": "JazzCash & EasyPaisa deposits explained",
+        "teaser": "How Pakistani players fund the wallet — methods, timing, and what to check before you play.",
+        "metaTitle": "JazzCash EasyPaisa Casino Deposit Guide",
+        "metaDesc": "Deposit to online casino with JazzCash or EasyPaisa in Pakistan — steps, timing, and troubleshooting.",
+        "intro": "Most Pakistan players fund through mobile wallets. Deposits happen inside the licensed H5 cashier after you sign in — this site lists games but does not hold your balance.",
+        "rankingTitle": "",
+        "rankingDesc": "",
+        "sections": {
+          "bodyTitle": "Standard deposit flow",
+          "body": "Log in → Wallet → Deposit → select JazzCash or EasyPaisa → enter amount within shown limits → approve in the wallet app → balance updates when the operator confirms (usually minutes).",
+          "pickTitle": "USDT and bank transfer",
+          "pick": "Some accounts also show USDT or bank transfer. Availability depends on KYC level and promotions.",
+          "tipTitle": "Withdrawals",
+          "tip": "Withdraw to the same method where possible. First withdrawal may need identity verification — complete it once to avoid delays later."
+        }
+      }
+    }
+  }
+}

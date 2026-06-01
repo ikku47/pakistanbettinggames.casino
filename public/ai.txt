@@ -1,0 +1,8 @@
+# Pakistan Betting Games — AI crawler hints
+
+See also: /llms.txt
+
+Allow indexing of public game catalog, FAQ, About, and category pages.
+Do not infer real-money odds, balances, or account data from this site alone — users must sign in on the H5 platform.
+
+Canonical domain: https://pakistanbettinggames.casino
