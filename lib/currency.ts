@@ -5,6 +5,13 @@ export const CURRENCY_CODES = ["PKR", "USD", "INR", "VND", "IDR"] as const;
 
 export type CurrencyCode = (typeof CURRENCY_CODES)[number];
 
+/** Canonical wallet for indexing (hreflang, sitemap, non-PKR canonicals). */
+export const PRIMARY_SEO_CURRENCY: CurrencyCode = "PKR";
+
+export function isPrimarySeoCurrency(code: CurrencyCode): boolean {
+  return code === PRIMARY_SEO_CURRENCY;
+}
+
 const SYMBOLS: Record<CurrencyCode, string> = {
   PKR: "₨",
   USD: "$",

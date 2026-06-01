@@ -14,7 +14,7 @@ import {
   getGuideSlugs,
 } from "@/lib/guides";
 import { getSystemConfig } from "@/lib/system-config";
-import { applyCurrencyToConfig } from "@/lib/currency";
+import { applyCurrencyToConfig, PRIMARY_SEO_CURRENCY } from "@/lib/currency";
 import {
   absoluteUrl,
   articleJsonLd,
@@ -79,7 +79,11 @@ export default async function GuidePage({ params }: Props) {
 
   const listItems = games.map((g) => ({
     name: formatGameTitle(g.gameName),
-    url: absoluteUrl(locale, `/games/${gameSlug(g)}`, currency),
+    url: absoluteUrl(
+      locale,
+      `/games/${gameSlug(g)}`,
+      PRIMARY_SEO_CURRENCY,
+    ),
   }));
 
   const bodySections = hasRanking

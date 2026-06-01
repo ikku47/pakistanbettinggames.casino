@@ -37,7 +37,6 @@ export async function generateMetadata({ params, searchParams }: Props) {
       path: `/games?q=${encodeURIComponent(trimmed)}`,
       siteName: tMeta("siteName"),
       titleSuffix: tMeta("titleSuffix"),
-      noIndex: false,
     });
   }
 

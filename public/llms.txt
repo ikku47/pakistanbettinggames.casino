@@ -9,35 +9,36 @@ Pakistan Betting Games is an entertainment brand catalog. Each game has a dedica
 Languages: English (Pakistan), Hindi, Urdu, Chinese.
 Locales: /en-PK/, /hi-IN/, /ur-PK/, /zh-CN/
 
-Wallet currencies (independent of language): PKR, USD, INR, VND, IDR.
-URL pattern: /{locale}/{currency}/… — e.g. /en-PK/pkr/games, /ur-PK/usd/guides/best-slots-pakistan. Currency hub list: /en-PK/pkr/currency.
+Primary indexed URLs use the PKR wallet segment: /{locale}/pkr/…
+Other wallets (usd, inr, vnd, idr) are available for visitors but canonical to the PKR URL for search indexing.
 
-## Primary pages
+## Primary pages (en-PK + PKR)
 
 - Home: https://pakistanbettinggames.casino/en-PK/pkr/
-- All games (catalog): https://pakistanbettinggames.casino/en-PK/pkr/games
+- All games: https://pakistanbettinggames.casino/en-PK/pkr/games
 - Game search: https://pakistanbettinggames.casino/en-PK/pkr/games?q={query}
-- Player guides: https://pakistanbettinggames.casino/en-PK/pkr/guides
-- Categories: /en-PK/pkr/category/popular, /slots, /sports, /fishing, /cards, /live-casino
+- Guides index: https://pakistanbettinggames.casino/en-PK/pkr/guides
+- Platforms: https://pakistanbettinggames.casino/en-PK/pkr/platform
+- Categories: https://pakistanbettinggames.casino/en-PK/pkr/category/popular (also /slots, /sports, /fishing, /cards, /live-casino)
 - FAQ: https://pakistanbettinggames.casino/en-PK/pkr/faq
 - About: https://pakistanbettinggames.casino/en-PK/pkr/about
-- Other wallets: /en-PK/usd/, /en-PK/inr/, etc.
+- Wallet overview: https://pakistanbettinggames.casino/en-PK/pkr/currency
 
 ## Guides (editorial, data-backed)
 
-- Top games Pakistan: /en-PK/guides/top-games-pakistan
-- Best slots: /en-PK/guides/best-slots-pakistan
-- Live casino picks: /en-PK/guides/live-casino-picks
-- Cricket & sports: /en-PK/pkr/guides/cricket-sports-betting
-- FIFA World Cup 2026 betting: /en-PK/pkr/guides/fifa-world-cup-2026-betting
-- Play without APK (H5): /en-PK/guides/play-without-apk
-- JazzCash & EasyPaisa deposits: /en-PK/guides/jazzcash-easypaisa-deposits
+- Top games Pakistan: https://pakistanbettinggames.casino/en-PK/pkr/guides/top-games-pakistan
+- Best slots: https://pakistanbettinggames.casino/en-PK/pkr/guides/best-slots-pakistan
+- Live casino picks: https://pakistanbettinggames.casino/en-PK/pkr/guides/live-casino-picks
+- Cricket & sports: https://pakistanbettinggames.casino/en-PK/pkr/guides/cricket-sports-betting
+- FIFA World Cup 2026 betting: https://pakistanbettinggames.casino/en-PK/pkr/guides/fifa-world-cup-2026-betting
+- Play without APK (H5): https://pakistanbettinggames.casino/en-PK/pkr/guides/play-without-apk
+- JazzCash & EasyPaisa deposits: https://pakistanbettinggames.casino/en-PK/pkr/guides/jazzcash-easypaisa-deposits
 
 Guide rankings use the same live game API as the catalog; order can change when the feed updates.
 
 ## Game pages
 
-Pattern: https://pakistanbettinggames.casino/en-PK/{currency}/games/{game-name}-{id}
+Pattern: https://pakistanbettinggames.casino/{locale}/pkr/games/{game-name}-{id}
 
 Each page includes VideoGame and SoftwareApplication structured data, breadcrumbs, provider icon, and play/download actions.
 
@@ -47,7 +48,7 @@ Site search uses game name lookup (minimum 2 characters). API-backed results lin
 
 ## Payments & region
 
-Primary audience: Pakistan. Common deposit methods: JazzCash, EasyPaisa, USDT. Supported wallets: PKR, USD, INR, VND, IDR — any locale can use any wallet; use header selector or currency pages.
+Primary audience: Pakistan. Common deposit methods: JazzCash, EasyPaisa, USDT. Supported wallets: PKR, USD, INR, VND, IDR.
 
 ## Responsible gaming
 

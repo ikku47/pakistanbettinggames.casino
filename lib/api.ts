@@ -135,9 +135,31 @@ export async function fetchPopularGames(
   return (popular?.games ?? []).slice(0, limit);
 }
 
+async function fetchAllGamesInClass(
+  locale: AppLocale,
+  gameClassCode: string,
+  pageSize = 100,
+): Promise<GameRecord[]> {
+  const merged: GameRecord[] = [];
+  const maxPages = 40;
+
+  for (let pageNo = 1; pageNo <= maxPages; pageNo += 1) {
+    const page = await fetchGameList(locale, {
+      gameClassCode,
+      pageNo,
+      pageSize,
+    });
+    if (!page.records.length) break;
+    merged.push(...page.records);
+    if (page.records.length < pageSize) break;
+  }
+
+  return merged;
+}
+
+/** All unique games for sitemap generation (paginated per category). */
 export async function fetchAllGamesForSitemap(
   locale: AppLocale,
-  maxPerCategory = 100,
 ): Promise<GameRecord[]> {
   const classes = await fetchGameClasses(locale);
   const codes = classes
@@ -160,12 +182,7 @@ export async function fetchAllGamesForSitemap(
 
   await Promise.all(
     codes.map(async (code) => {
-      const page = await fetchGameList(locale, {
-        gameClassCode: code,
-        pageNo: 1,
-        pageSize: maxPerCategory,
-      });
-      add(page.records);
+      add(await fetchAllGamesInClass(locale, code));
     }),
   );
 

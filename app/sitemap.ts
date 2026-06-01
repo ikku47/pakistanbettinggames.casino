@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { fetchAllGamesForSitemap, fetchPlatformCatalog } from "@/lib/api";
 import { categories } from "@/lib/categories";
 import { siteConfig } from "@/lib/config";
-import { CURRENCY_CODES, currencySlug } from "@/lib/currency";
+import { currencySlug, PRIMARY_SEO_CURRENCY } from "@/lib/currency";
 import { getGuideSlugs } from "@/lib/guides";
 import { locales, type AppLocale } from "@/i18n/routing";
 import { gameSlug } from "@/lib/utils";
@@ -28,68 +28,62 @@ export default async function sitemap(props: {
   const base = siteConfig.domain.replace(/\/$/, "");
   const now = new Date();
   const prefix = `/${locale}`;
+  const cur = currencySlug(PRIMARY_SEO_CURRENCY);
+  const curPrefix = `${prefix}/${cur}`;
 
   const entries: MetadataRoute.Sitemap = [];
 
-  for (const code of CURRENCY_CODES) {
-    const cur = currencySlug(code);
-    const curPrefix = `${prefix}/${cur}`;
+  for (const path of staticPaths) {
+    entries.push({
+      url: `${base}${curPrefix}${path}`,
+      lastModified: now,
+      changeFrequency:
+        path === "" || path === "/games" ? "daily" : "monthly",
+      priority: path === "" ? 1 : path === "/games" ? 0.9 : 0.5,
+    });
+  }
 
-    for (const path of staticPaths) {
-      entries.push({
-        url: `${base}${curPrefix}${path}`,
-        lastModified: now,
-        changeFrequency:
-          path === "" || path === "/games" ? "daily" : "monthly",
-        priority: path === "" ? 1 : path === "/games" ? 0.9 : 0.5,
-      });
-    }
+  for (const slug of getGuideSlugs()) {
+    entries.push({
+      url: `${base}${curPrefix}/guides/${slug}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.75,
+    });
+  }
 
-    for (const slug of getGuideSlugs()) {
-      entries.push({
-        url: `${base}${curPrefix}/guides/${slug}`,
-        lastModified: now,
-        changeFrequency: "weekly",
-        priority: 0.75,
-      });
-    }
-
-    for (const cat of categories) {
-      entries.push({
-        url: `${base}${curPrefix}/category/${cat.slug}`,
-        lastModified: now,
-        changeFrequency: "daily",
-        priority: 0.85,
-      });
-    }
-
-    try {
-      const platforms = await fetchPlatformCatalog(locale);
-      for (const plat of platforms) {
-        entries.push({
-          url: `${base}${curPrefix}/platform/${plat.slug}`,
-          lastModified: now,
-          changeFrequency: "daily",
-          priority: 0.8,
-        });
-      }
-    } catch {
-      /* API unavailable */
-    }
+  for (const cat of categories) {
+    entries.push({
+      url: `${base}${curPrefix}/category/${cat.slug}`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.85,
+    });
   }
 
   try {
-    const games = await fetchAllGamesForSitemap(locale, 80);
-    for (const code of CURRENCY_CODES) {
-      const cur = currencySlug(code);
-      for (const g of games) {
-        entries.push({
-          url: `${base}${prefix}/${cur}/games/${gameSlug(g)}`,
-          lastModified: now,
-          changeFrequency: "weekly",
-          priority: 0.7,
-        });
-      }
+    const platforms = await fetchPlatformCatalog(locale);
+    for (const plat of platforms) {
+      entries.push({
+        url: `${base}${curPrefix}/platform/${plat.slug}`,
+        lastModified: now,
+        changeFrequency: "daily",
+        priority: 0.8,
+      });
+    }
+  } catch {
+    /* API unavailable */
+  }
+
+  try {
+    const games = await fetchAllGamesForSitemap(locale);
+    for (const g of games) {
+      entries.push({
+        url: `${base}${curPrefix}/games/${gameSlug(g)}`,
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: 0.7,
+      });
     }
   } catch {
     /* API unavailable at build */

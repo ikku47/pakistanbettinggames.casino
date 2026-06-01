@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { htmlLang } from "@/i18n/api-locale";
 import { locales, type AppLocale } from "@/i18n/routing";
-import { pathWithCurrency, type CurrencyCode } from "./currency";
+import {
+  isPrimarySeoCurrency,
+  PRIMARY_SEO_CURRENCY,
+  pathWithCurrency,
+  type CurrencyCode,
+} from "./currency";
 import { siteConfig } from "./config";
 import type { GameRecord } from "./types";
 import { formatGameTitle } from "./utils";
@@ -47,18 +52,24 @@ export function absoluteUrl(
   return `${base}${localizedPath(locale, path, currency)}`;
 }
 
-export function hreflangAlternates(
-  path = "",
-  currency?: CurrencyCode,
-): Record<string, string> {
+/** Language alternates always use {@link PRIMARY_SEO_CURRENCY} to avoid duplicate currency URLs. */
+export function hreflangAlternates(path = ""): Record<string, string> {
   const base = siteConfig.domain.replace(/\/$/, "");
   const languages: Record<string, string> = {};
 
   for (const locale of locales) {
-    languages[htmlLang[locale]] = `${base}${localizedPath(locale, path, currency)}`;
+    languages[htmlLang[locale]] = `${base}${localizedPath(
+      locale,
+      path,
+      PRIMARY_SEO_CURRENCY,
+    )}`;
   }
 
-  languages["x-default"] = `${base}${localizedPath("en-PK", path, currency)}`;
+  languages["x-default"] = `${base}${localizedPath(
+    "en-PK",
+    path,
+    PRIMARY_SEO_CURRENCY,
+  )}`;
   return languages;
 }
 
@@ -79,6 +90,13 @@ export function buildMetadata(opts: {
 }): Metadata {
   const path = opts.path ?? "/";
   const url = absoluteUrl(opts.locale, path, opts.currency);
+  const canonical = isPrimarySeoCurrency(opts.currency)
+    ? url
+    : absoluteUrl(opts.locale, path, PRIMARY_SEO_CURRENCY);
+  const indexable =
+    opts.noIndex === undefined
+      ? isPrimarySeoCurrency(opts.currency)
+      : !opts.noIndex;
   const suffix = opts.titleSuffix ?? "Online Casino & Betting";
   const siteName = opts.siteName ?? "Pakistan Betting Games";
   const fullTitle =
@@ -102,8 +120,8 @@ export function buildMetadata(opts: {
     description: opts.description,
     keywords: opts.keywords,
     alternates: {
-      canonical: url,
-      languages: hreflangAlternates(path, opts.currency),
+      canonical,
+      languages: hreflangAlternates(path),
     },
     openGraph: {
       type: "website",
@@ -120,8 +138,8 @@ export function buildMetadata(opts: {
       description: opts.description,
       images: ogImages.map((img) => img.url),
     },
-    robots: opts.noIndex
-      ? { index: false, follow: false }
+    robots: !indexable
+      ? { index: false, follow: true }
       : {
           index: true,
           follow: true,
