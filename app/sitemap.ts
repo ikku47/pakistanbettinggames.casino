@@ -1,11 +1,14 @@
 import type { MetadataRoute } from "next";
-import { fetchAllGamesForSitemap, fetchPlatformCatalog } from "@/lib/api";
+import { getCachedGameClasses, getCachedSitemapGames } from "@/lib/catalog-data";
+import { buildPlatformCatalog } from "@/lib/platforms";
 import { categories } from "@/lib/categories";
 import { siteConfig } from "@/lib/config";
 import { currencySlug, PRIMARY_SEO_CURRENCY } from "@/lib/currency";
 import { getGuideSlugs } from "@/lib/guides";
 import { locales, type AppLocale } from "@/i18n/routing";
 import { gameSlug } from "@/lib/utils";
+
+export const revalidate = 2592000;
 
 const staticPaths = [
   "",
@@ -62,7 +65,7 @@ export default async function sitemap(props: {
   }
 
   try {
-    const platforms = await fetchPlatformCatalog(locale);
+    const platforms = buildPlatformCatalog(await getCachedGameClasses(locale));
     for (const plat of platforms) {
       entries.push({
         url: `${base}${curPrefix}/platform/${plat.slug}`,
@@ -76,7 +79,7 @@ export default async function sitemap(props: {
   }
 
   try {
-    const games = await fetchAllGamesForSitemap(locale);
+    const games = await getCachedSitemapGames(locale);
     for (const g of games) {
       entries.push({
         url: `${base}${curPrefix}/games/${gameSlug(g)}`,

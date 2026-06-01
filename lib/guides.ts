@@ -1,6 +1,7 @@
 import type { GameRecord } from "./types";
 import type { AppLocale } from "@/i18n/routing";
-import { fetchGameList, fetchPopularGames } from "./api";
+import { fetchGameList } from "./api";
+import { getCachedPopularGames } from "./catalog-data";
 
 export type GuideDataSource =
   | { type: "popular"; limit: number }
@@ -67,10 +68,10 @@ export async function fetchGamesForGuide(
   source: GuideDataSource,
 ): Promise<GameRecord[]> {
   if (source.type === "none") {
-    return fetchPopularGames(locale, 6);
+    return getCachedPopularGames(locale, 6);
   }
   if (source.type === "popular") {
-    return fetchPopularGames(locale, source.limit);
+    return getCachedPopularGames(locale, source.limit);
   }
   const page = await fetchGameList(locale, {
     gameClassCode: source.code,
@@ -78,5 +79,5 @@ export async function fetchGamesForGuide(
     pageSize: source.limit,
   });
   if (page.records.length > 0) return page.records;
-  return fetchPopularGames(locale, Math.min(source.limit, 6));
+  return getCachedPopularGames(locale, Math.min(source.limit, 6));
 }

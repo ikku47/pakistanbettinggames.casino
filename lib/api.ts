@@ -141,7 +141,7 @@ async function fetchAllGamesInClass(
   pageSize = 100,
 ): Promise<GameRecord[]> {
   const merged: GameRecord[] = [];
-  const maxPages = 40;
+  const maxPages = 12;
 
   for (let pageNo = 1; pageNo <= maxPages; pageNo += 1) {
     const page = await fetchGameList(locale, {
@@ -211,22 +211,6 @@ export async function findGameById(
   locale: AppLocale,
   id: number,
 ): Promise<GameRecord | null> {
-  const classes = await fetchGameClasses(locale);
-  for (const cls of classes) {
-    const inPopular = cls.games?.find((g) => g.id === id);
-    if (inPopular) return inPopular;
-  }
-
-  for (const cls of classes) {
-    if (cls.code === "RM_TEMP") continue;
-    const page = await fetchGameList(locale, {
-      gameClassCode: cls.code,
-      pageNo: 1,
-      pageSize: 100,
-    });
-    const found = page.records.find((g) => g.id === id);
-    if (found) return found;
-  }
-
-  return null;
+  const { getGameById } = await import("./catalog-data");
+  return getGameById(locale, id);
 }

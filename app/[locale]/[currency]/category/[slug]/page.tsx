@@ -7,11 +7,11 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { PlayCta } from "@/components/ui/PlayCta";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { fetchGameList } from "@/lib/api";
 import {
-  fetchGameClasses,
-  fetchGameList,
-  fetchPopularGames,
-} from "@/lib/api";
+  getCachedGameClasses,
+  getCachedPopularGames,
+} from "@/lib/catalog-data";
 import { categoryIconSrc, getCategoryBySlug } from "@/lib/categories";
 import { getSystemConfig } from "@/lib/system-config";
 import {
@@ -29,6 +29,8 @@ type Props = {
   searchParams: Promise<{ page?: string }>;
 };
 
+export const revalidate = 2592000;
+
 export function generateStaticParams() {
   return ["popular", "slots", "sports", "fishing", "cards", "live-casino"].map(
     (slug) => ({ slug }),
@@ -44,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tMeta = await getTranslations({ locale, namespace: "Meta" });
 
   const [classes, config] = await Promise.all([
-    fetchGameClasses(locale),
+    getCachedGameClasses(locale),
     getSystemConfig(locale),
   ]);
   const iconSrc = categoryIconSrc(classes, def.code, config);
@@ -76,7 +78,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
     getTranslations({ locale, namespace: "Categories" }),
     getTranslations({ locale, namespace: "Games" }),
     getTranslations({ locale, namespace: "Common" }),
-    fetchGameClasses(locale),
+    getCachedGameClasses(locale),
     getSystemConfig(locale),
   ]);
 
@@ -88,7 +90,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   let pagination = { current: 1, pages: 1 };
 
   if (isPopular) {
-    games = await fetchPopularGames(locale, 48);
+    games = await getCachedPopularGames(locale, 48);
   } else {
     const data = await fetchGameList(locale, {
       gameClassCode: def.code,

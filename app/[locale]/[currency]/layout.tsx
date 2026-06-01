@@ -9,11 +9,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { htmlLang } from "@/i18n/api-locale";
 import { routing } from "@/i18n/routing";
 import { PartnerLogos } from "@/components/platforms/PartnerLogos";
-import { fetchAllPlatIcons, fetchGameClasses } from "@/lib/api";
-import {
-  buildPlatformCatalog,
-  buildPlatformIndex,
-} from "@/lib/platforms";
+import { getCatalogBootstrap } from "@/lib/catalog-data";
 import {
   CURRENCY_CODES,
   currencySlug,
@@ -32,6 +28,9 @@ const manrope = Manrope({
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
 });
+
+/** 30 days — must be a literal for Next segment config */
+export const revalidate = 2592000;
 
 export const viewport: Viewport = {
   themeColor: "#1ebe57",
@@ -84,18 +83,19 @@ export default async function CurrencyLayout({
 
   setRequestLocale(appLocale);
 
-  const [messages, config, partnerIcons, classes, tMeta, tPartners] =
-    await Promise.all([
-      getMessages(),
-      getSystemConfig(appLocale),
-      fetchAllPlatIcons(appLocale),
-      fetchGameClasses(appLocale),
-      getTranslations("Meta"),
-      getTranslations("Partners"),
-    ]);
+  const [messages, catalog, tMeta, tPartners] = await Promise.all([
+    getMessages(),
+    getCatalogBootstrap(appLocale),
+    getTranslations("Meta"),
+    getTranslations("Partners"),
+  ]);
 
-  const platformCatalog = buildPlatformCatalog(classes);
-  const platformIndex = buildPlatformIndex(classes);
+  const {
+    config,
+    partnerIcons,
+    platformCatalog,
+    platformIndex,
+  } = catalog;
 
   const dir = appLocale === "ur-PK" ? "rtl" : "ltr";
 
