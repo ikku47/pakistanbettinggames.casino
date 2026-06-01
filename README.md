@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pakistan Betting Games
 
-## Getting Started
+SEO catalog for online casino and betting games in Pakistan — slots, sports betting, live casino, and mobile H5 play. Built with **Next.js 16**, **next-intl**, and deployed to **Cloudflare Workers** via [OpenNext](https://opennext.js.org/cloudflare).
 
-First, run the development server:
+**Production:** [pakistanbettinggames.casino](https://pakistanbettinggames.casino)
+
+## Stack
+
+- Next.js 16 (App Router) + React 19
+- next-intl — `en-PK`, `ur-PK`, `hi-IN`, `zh-CN`
+- Wallet URLs — `/{locale}/{currency}/…` (e.g. `/en-PK/pkr/games`)
+- Live game data from the platform API
+- OpenNext Cloudflare adapter + Wrangler
+
+## Requirements
+
+- [Bun](https://bun.sh) (or Node 22+)
+- Game API credentials (see environment variables below)
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+cp .dev.vars.example .dev.vars   # optional, for Workers preview
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create `.env.local`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+NEXT_PUBLIC_SITE_URL=https://pakistanbettinggames.casino
+NEXT_PUBLIC_PLATFORM_URL=https://your-h5-domain.com
+GAME_API_BASE_URL=https://your-api-host.com
+GAME_API_TOKEN=your-token
+GAME_API_PLATFORM=3
+NEXT_PUBLIC_CDN_URL=https://your-cdn-host.com
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+bun run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000). The app redirects to a locale + currency path (default `en-PK` + `pkr`).
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command | Purpose |
+|---------|---------|
+| `bun run dev` | Next.js dev server |
+| `bun run build` | Next.js production build only (compile check) |
+| `bun run start` | Run `.next` output locally (Node) |
+| `bun run preview` | OpenNext build + preview in Workers runtime |
+| `bun run deploy` | OpenNext build + deploy to Cloudflare |
+| `bun run lint` | ESLint |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy on Cloudflare Workers
 
-## Deploy on Vercel
+Do **not** use `bun run build` + `npx wrangler deploy`. That skips OpenNext and deploys the wrong output.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Dashboard build settings
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Field | Value |
+|-------|--------|
+| **Build command** | `bunx opennextjs-cloudflare build` |
+| **Deploy command** | `bunx opennextjs-cloudflare deploy` |
+| **Non-production branch deploy command** | `bunx opennextjs-cloudflare upload` |
+| **Path** | `/` |
+
+Or use a single build step: **`bun run deploy`** and leave deploy command empty (if your project type allows it).
+
+Add the same environment variables as `.env.local` in the Cloudflare project settings.
+
+More detail: [docs/CLOUDFLARE.md](docs/CLOUDFLARE.md)
+
+### Middleware note
+
+Routing uses **`middleware.ts`** (Edge), not Next.js 16 `proxy.ts`. OpenNext does not support Node `proxy.ts` yet. A local deprecation warning is expected.
+
+## Project structure
+
+```
+app/[locale]/[currency]/   # Localized, currency-scoped pages
+components/                # UI (games, guides, layout, SEO)
+lib/                       # API, SEO, currency, config
+messages/                  # i18n JSON per locale
+middleware.ts              # Locale + currency redirects (Edge)
+wrangler.jsonc             # Cloudflare Worker config
+open-next.config.ts        # OpenNext adapter config
+```
+
+## SEO
+
+- Per-page metadata, hreflang, JSON-LD, locale sitemaps
+- Indexed URLs use **PKR** paths (`/en-PK/pkr/…`); other currencies are `noindex` with canonical to PKR
+
+Operator checklist: [docs/SEO.md](docs/SEO.md)
+
+## Agent / contributor notes
+
+See [AGENTS.md](AGENTS.md) for Next.js 16 conventions in this repo.
