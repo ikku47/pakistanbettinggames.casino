@@ -10,8 +10,7 @@ import { routing, type AppLocale } from "./i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
 
-const LOCALES = routing.locales;
-const LOCALE_SET = new Set<string>(LOCALES);
+const LOCALE_SET = new Set<string>(routing.locales);
 
 const LEGACY_SEGMENTS = new Set([
   "games",
@@ -46,7 +45,8 @@ function withCurrencyCookie(
   return response;
 }
 
-export default function proxy(request: NextRequest) {
+/** Edge middleware — required for @opennextjs/cloudflare (proxy.ts is Node-only in Next 16). */
+export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const parts = pathname.split("/").filter(Boolean);
 
@@ -54,7 +54,6 @@ export default function proxy(request: NextRequest) {
     const locale = parts[0] as AppLocale;
     const slug = preferredCurrencySlug(request);
 
-    // /en-PK only → /en-PK/pkr
     if (parts.length === 1) {
       return withCurrencyCookie(
         NextResponse.redirect(new URL(`/${locale}/${slug}`, request.url)),
@@ -64,7 +63,6 @@ export default function proxy(request: NextRequest) {
 
     const second = parts[1];
 
-    // /en-PK/games/... → /en-PK/pkr/games/...
     if (LEGACY_SEGMENTS.has(second)) {
       const rest = parts.slice(1).join("/");
       return withCurrencyCookie(
@@ -75,7 +73,6 @@ export default function proxy(request: NextRequest) {
       );
     }
 
-    // /en-PK/currency/usd → /en-PK/usd
     if (second === "currency") {
       const code = parts[2];
       if (code && parseCurrencySlug(code)) {
@@ -92,13 +89,11 @@ export default function proxy(request: NextRequest) {
       );
     }
 
-    // /en-PK/pkr/... — valid currency segment
     const urlCurrency = parseCurrencySlug(second);
     if (urlCurrency) {
       return withCurrencyCookie(intlMiddleware(request), urlCurrency);
     }
 
-    // Unknown second segment — treat as legacy path missing currency
     return withCurrencyCookie(
       NextResponse.redirect(
         new URL(`/${locale}/${slug}/${parts.slice(1).join("/")}`, request.url),
