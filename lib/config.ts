@@ -28,7 +28,7 @@ export function assetUrl(
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
-/** Casino / H5 entry URL — `inviteCode` + `utm_source` only. */
+/** Casino entry URL — `inviteCode` + `utm_source` only. */
 export function playUrl(config: SystemConfig): string {
   const raw =
     config.app_call_h5_domain ||

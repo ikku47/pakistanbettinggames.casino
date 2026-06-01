@@ -1,10 +1,10 @@
 # Pakistan Betting Games
 
-> pakistanbettinggames.casino — online betting games catalog for Pakistan and international players. Live casino, slots, sports betting, fishing, and card games with JazzCash, EasyPaisa, and H5 browser play.
+> pakistanbettinggames.casino — online betting games catalog for Pakistan and international players. Live casino, slots, sports betting, fishing, and card games with JazzCash, EasyPaisa, and mobile browser play.
 
 ## About this site
 
-Pakistan Betting Games is an entertainment brand catalog. Each game has a dedicated page with description, provider, category, and a Play link to the licensed H5 casino. The operator holds MGA licensing and international compliance certifications (see About page).
+Pakistan Betting Games is an entertainment brand catalog. Each game has a dedicated page with description, provider, category, and a Play link to the licensed online casino. The operator holds MGA licensing and international compliance certifications (see About page).
 
 Languages: English (Pakistan), Hindi, Urdu, Chinese.
 Locales: /en-PK/, /hi-IN/, /ur-PK/, /zh-CN/
@@ -31,7 +31,7 @@ Other wallets (usd, inr, vnd, idr) are available for visitors but canonical to t
 - Live casino picks: https://pakistanbettinggames.casino/en-PK/pkr/guides/live-casino-picks
 - Cricket & sports: https://pakistanbettinggames.casino/en-PK/pkr/guides/cricket-sports-betting
 - FIFA World Cup 2026 betting: https://pakistanbettinggames.casino/en-PK/pkr/guides/fifa-world-cup-2026-betting
-- Play without APK (H5): https://pakistanbettinggames.casino/en-PK/pkr/guides/play-without-apk
+- Play without APK: https://pakistanbettinggames.casino/en-PK/pkr/guides/play-without-apk
 - JazzCash & EasyPaisa deposits: https://pakistanbettinggames.casino/en-PK/pkr/guides/jazzcash-easypaisa-deposits
 
 Guide rankings use the same live game API as the catalog; order can change when the feed updates.
@@ -63,4 +63,4 @@ Primary audience: Pakistan. Common deposit methods: JazzCash, EasyPaisa, USDT. S
 
 ## Contact / play
 
-Real-money play occurs on the linked H5 casino after tapping Play on any game or category page. This catalog does not process payments directly.
+Real-money play occurs on the linked online casino after tapping Play on any game or category page. This catalog does not process payments directly.

@@ -1,6 +1,6 @@
 # Pakistan Betting Games
 
-SEO catalog for online casino and betting games in Pakistan — slots, sports betting, live casino, and mobile H5 play. Built with **Next.js 16**, **next-intl**, and deployed to **Cloudflare Workers** via [OpenNext](https://opennext.js.org/cloudflare).
+SEO catalog for online casino and betting games in Pakistan — slots, sports betting, live casino, and mobile browser play. Built with **Next.js 16**, **next-intl**, and deployed to **Cloudflare Workers** via [OpenNext](https://opennext.js.org/cloudflare).
 
 **Production:** [pakistanbettinggames.casino](https://pakistanbettinggames.casino)
 
@@ -28,7 +28,7 @@ Create `.env.local`:
 
 ```env
 NEXT_PUBLIC_SITE_URL=https://pakistanbettinggames.casino
-NEXT_PUBLIC_PLATFORM_URL=https://your-h5-domain.com
+NEXT_PUBLIC_PLATFORM_URL=https://your-casino-domain.com
 GAME_API_BASE_URL=https://your-api-host.com
 GAME_API_TOKEN=your-token
 GAME_API_PLATFORM=3

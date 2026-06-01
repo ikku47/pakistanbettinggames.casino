@@ -3,6 +3,6 @@
 See also: /llms.txt
 
 Allow indexing of public game catalog, FAQ, About, and category pages.
-Do not infer real-money odds, balances, or account data from this site alone — users must sign in on the H5 platform.
+Do not infer real-money odds, balances, or account data from this site alone — users must sign in on the casino platform.
 
 Canonical domain: https://pakistanbettinggames.casino
