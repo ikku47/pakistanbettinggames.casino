@@ -160,7 +160,6 @@ export default async function GuidePage({ params }: Props) {
               games={games}
               config={wallet}
               locale={locale}
-              currency={currency}
               rankLabel={t("rank")}
               playLabel={tGames("play")}
               detailsLabel={t("viewDetails")}
@@ -175,7 +174,6 @@ export default async function GuidePage({ params }: Props) {
               games={games}
               config={wallet}
               locale={locale}
-              currency={currency}
               rankLabel={t("rank")}
               playLabel={tGames("play")}
               detailsLabel={t("viewDetails")}
